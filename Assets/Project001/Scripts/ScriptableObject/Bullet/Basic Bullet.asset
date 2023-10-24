@@ -1,0 +1,25 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dc752cbec0c804d46b1bd61d31f1542b, type: 3}
+  m_Name: Basic Bullet
+  m_EditorClassIdentifier: 
+  bulletID: BASIC_BULLET
+  bulletName: Basic Bullet
+  bulletDescription: Normal Damage
+  bulletIcon: {fileID: 549467968, guid: 5db52258447343d47950dbf41df23974, type: 3}
+  bulletPrice: 0
+  capacityType: 0
+  bulletCapacity: 0
+  bulletDamage: 25
+  bulletSpeed: 150
+  bulletPrefab: {fileID: 2440931480022169044, guid: 64f2ee432b3a72f4ab8afb3fb90998ca,
+    type: 3}

@@ -1,0 +1,20 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 106264ef47cf66046a403504256d9241, type: 3}
+  m_Name: SniperTowerUpgrade
+  m_EditorClassIdentifier: 
+  towerIcon: {fileID: 21300000, guid: 8f658c76a2da06848bc75b4b3f150f6c, type: 3}
+  upgradePrice: 275
+  detectRange: 7
+  attackSpeed: 1
+  towerPrefab: {fileID: 2692097663583696691, guid: 956f8604d1f48dd46a9ff93eb1ea60d8,
+    type: 3}
