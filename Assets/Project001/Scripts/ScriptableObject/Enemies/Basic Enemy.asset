@@ -15,7 +15,7 @@ MonoBehaviour:
   MapType: 0
   health: 150
   speed: 275
-  Damage: 12
+  Damage: 10
   Gold: 15
   AttackRange: 0
   AttackSpeed: 0
