@@ -4,15 +4,21 @@ using UnityEngine;
 
 public class HealthBust : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    private ShipController Ship;
 
-    // Update is called once per frame
-    void Update()
+    private float currentHealth;
+    private void OnEnable()
     {
-        
+        currentHealth = Ship.currentHealth;
+    }
+    private void OnDisable()
+    {
+        Ship.currentHealth = currentHealth;
+    }
+    private void Start()
+    {
+        Ship = GameObject.FindGameObjectWithTag("Ship").GetComponent<ShipController>();
+
+        Ship.currentHealth = Ship.currentHealth + (Ship.currentHealth * 20) / 100;
     }
 }

@@ -5,13 +5,14 @@ public class ShipController : MonoBehaviour
     public SOShip ship;
     public SOShipUpgradeble upgradeble;
     private float currentSpeed;
-
+    public float currentHealth;
     private Rigidbody2D rb;
     private bool isFacingRight = true;
 
     private void Start()
     {
         currentSpeed = ship.speed;
+        currentHealth = ship.health;
         rb = GetComponent<Rigidbody2D>();
     }
 
