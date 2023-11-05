@@ -1,0 +1,19 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a5f16a5e0e92dc04580ea5b9fd412511, type: 3}
+  m_Name: Agument1 4
+  m_EditorClassIdentifier: 
+  AgumentIndex: 3
+  agumentImage: {fileID: 778215159, guid: 7f4a35f76b75ca14dac45349d3203f89, type: 3}
+  agumentName: Hebele
+  agumentDescreption: AAAAAAAAAAAAAAAAA
+  Agument: {fileID: 0}
