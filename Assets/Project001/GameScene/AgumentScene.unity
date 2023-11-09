@@ -812,6 +812,8 @@ MonoBehaviour:
   agumentImage: {fileID: 972958119}
   agumentName: {fileID: 1360069235}
   agumentDescription: {fileID: 2075888983}
+  agumentUIManager: {fileID: 459367827}
+  aguments: {fileID: 0}
 --- !u!114 &690194176
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -945,6 +947,8 @@ MonoBehaviour:
   agumentImage: {fileID: 1185205737}
   agumentName: {fileID: 320067592}
   agumentDescription: {fileID: 896261403}
+  agumentUIManager: {fileID: 459367827}
+  aguments: {fileID: 0}
 --- !u!1 &718548912
 GameObject:
   m_ObjectHideFlags: 0
@@ -1002,6 +1006,8 @@ MonoBehaviour:
   agumentImage: {fileID: 536168159}
   agumentName: {fileID: 1460596378}
   agumentDescription: {fileID: 240482219}
+  agumentUIManager: {fileID: 459367827}
+  aguments: {fileID: 0}
 --- !u!114 &718548915
 MonoBehaviour:
   m_ObjectHideFlags: 0

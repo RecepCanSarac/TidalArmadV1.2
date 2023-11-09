@@ -37,7 +37,7 @@ public class RandomMapManangment : MonoBehaviour
         {
             case NodeType.MinorEnemy:
                 int randomMinor = Random.Range(0, normalLevel.levelNumber.Length);
-                SceneManager.LoadScene("Minor " + randomMinor);
+                SceneManager.LoadScene("Minor " + 0);
                 break;
             case NodeType.EliteEnemy:
                 int randomElit = Random.Range(0,elitLevel.levelNumber.Length);
