@@ -12,8 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a5f16a5e0e92dc04580ea5b9fd412511, type: 3}
   m_Name: Agument1 1
   m_EditorClassIdentifier: 
+  AgumentTag: +200Gold
   AgumentIndex: 0
   agumentImage: {fileID: -1621897279, guid: 884b8722208a56346a4ca41767349c6c, type: 3}
-  agumentName: Hebele
-  agumentDescreption: AAAAAAAAAAAAAAAAA
+  agumentName: +200Gold
+  agumentDescreption: +200Gold
   Agument: {fileID: 7441955519018050279, guid: 5e5fe4f4dedea824cb93042c1a65f0a2, type: 3}

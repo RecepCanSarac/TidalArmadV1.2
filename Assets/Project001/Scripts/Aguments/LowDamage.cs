@@ -1,7 +1,7 @@
 
 using UnityEngine;
 
-public class LowDamage : MonoBehaviour
+public class LowDamage : MonoBehaviour, IClickable
 {
     public static LowDamage instance;
     private void Awake() => instance = this;
@@ -11,26 +11,32 @@ public class LowDamage : MonoBehaviour
 
     public float[] currentDamage;
 
-    private void OnEnable()
-    {
-        for (int i = 0; i < enemies.Length; i++)
-        {
-            currentDamage[i] = enemies[i].Damage;
-        }
+    //private void OnEnable()
+    //{
+    //    for (int i = 0; i < enemies.Length; i++)
+    //    {
+    //        currentDamage[i] = enemies[i].Damage;
+    //    }
       
-    }
-    private void OnDisable()
-    {
-        for (int i = 0; i < enemies.Length; i++)
-        {
-            enemies[i].Damage = currentDamage[i];
-        }
-    }
+    //}
+    //private void OnDisable()
+    //{
+    //    for (int i = 0; i < enemies.Length; i++)
+    //    {
+    //        enemies[i].Damage = currentDamage[i];
+    //    }
+    //}
     private void Start()
     {
-        for (int i = 0; i < enemies.Length; i++)
-        {
-            enemies[i].Damage = enemies[i].Damage - (enemies[i].Damage * 20) / 100;
-        }
+       
+    }
+
+    public void Click()
+    {
+        Debug.Log("LowDamage");
+        //for (int i = 0; i < enemies.Length; i++)
+        //{
+        //    enemies[i].Damage = enemies[i].Damage - (enemies[i].Damage * 20) / 100;
+        //}
     }
 }

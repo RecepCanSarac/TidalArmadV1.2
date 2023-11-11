@@ -1,15 +1,22 @@
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class AgumentUIManager : MonoBehaviour
 {
     public SOAgumentSystem AgumentSystem;
     public AgumentUI[] agumentUI;
+    public GameObject[] panel;
 
     private void Start()
     {
+        for (int i = 0; i < panel.Length; i++)
+        {
+            panel[i].AddComponent<Button>();
+        }
         SetRandomAgument();
     }
+
     private void Update()
     {
         if (Input.GetKeyDown(KeyCode.Q))
@@ -44,11 +51,7 @@ public class AgumentUIManager : MonoBehaviour
         for (int i = 0; i < agumentUI.Length; i++)
         {
             int randomIndex = availableIndices[Random.Range(0, availableIndices.Count)];
-
             agumentUI[i].Setup(AgumentSystem.Aguments[randomIndex].agument);
-
-            //AgumentSystem.Aguments[randomIndex].available = false;
-
             availableIndices.Remove(randomIndex);
         }
     }

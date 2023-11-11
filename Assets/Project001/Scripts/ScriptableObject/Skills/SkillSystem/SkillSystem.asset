@@ -1,0 +1,29 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8bca7b5992d7fa54daa2351d7c4d8fdc, type: 3}
+  m_Name: SkillSystem
+  m_EditorClassIdentifier: 
+  SkilList:
+  - skil: {fileID: 11400000, guid: 57ae0305c70742a4fb02e8dff14184dd, type: 2}
+    isAvailable: 0
+  - skil: {fileID: 11400000, guid: 14a0205afe0098a429b5d104d2f28717, type: 2}
+    isAvailable: 0
+  - skil: {fileID: 11400000, guid: da96cd2950b826c43996393e5e8422b0, type: 2}
+    isAvailable: 0
+  - skil: {fileID: 11400000, guid: 90d219e08f8e21b43a88b541a14baa9d, type: 2}
+    isAvailable: 0
+  - skil: {fileID: 11400000, guid: 940c78d415a38c54691fb261538dc25a, type: 2}
+    isAvailable: 0
+  - skil: {fileID: 11400000, guid: 940c78d415a38c54691fb261538dc25a, type: 2}
+    isAvailable: 0
+  - skil: {fileID: 11400000, guid: 940c78d415a38c54691fb261538dc25a, type: 2}
+    isAvailable: 0

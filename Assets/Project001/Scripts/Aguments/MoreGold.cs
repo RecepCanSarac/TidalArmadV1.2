@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class MoreGold : MonoBehaviour
+public class MoreGold : MonoBehaviour,IClickable
 {
     public static MoreGold instance;
     private void Awake() => instance = this;
@@ -32,5 +32,10 @@ public class MoreGold : MonoBehaviour
         {
             enemiyGolds[i].Gold = enemiyGolds[i].Gold + AddedGold;
         }
+    }
+
+    public void Click()
+    {
+        Debug.Log("MoreGold");
     }
 }

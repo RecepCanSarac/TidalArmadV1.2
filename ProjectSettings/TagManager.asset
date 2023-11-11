@@ -8,6 +8,15 @@ TagManager:
   - Bullet
   - Ship
   - UpgradeButton
+  - Agument
+  - HealthBust
+  - EnemySlow
+  - +200Gold
+  - ForceUp
+  - LowDamage
+  - MoreGold
+  - RandomEnemyGold
+  - FastAttackSpeed
   layers:
   - Default
   - TransparentFX

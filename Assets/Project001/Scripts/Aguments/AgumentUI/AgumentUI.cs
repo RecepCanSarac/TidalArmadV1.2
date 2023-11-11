@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine.UI;
 using TMPro;
 using UnityEngine;
@@ -12,25 +10,48 @@ public class AgumentUI : MonoBehaviour
     public AgumentUIManager agumentUIManager;
     public SOAgument aguments = null;
 
-    SOAgument agument;
+    private void Awake()
+    {
+        //this.gameObject.AddComponent<Button>();
+    }
     public void Setup(SOAgument _agument)
     {
-     
         agumentImage.sprite = _agument.agumentImage;
         agumentName.text = _agument.agumentName;
         agumentDescription.text = _agument.agumentDescreption;
-        //this.gameObject.AddComponent<Button>().onClick.AddListener(delegate { OnclickAgument(_agument.AgumentIndex); });
         aguments = _agument;
+        //gameObject.GetComponent<Button>().onClick.AddListener(delegate { OnclickAgument(); });
+        Debug.Log("Sayý");
     }
 
-    public void OnclickAgument(int agumentIndex)
+    public void OnclickAgument()
     {
-        Debug.Log("hebele");
-        //Özellikleri burada çalýþtýrmalýyýz
         if (aguments is not null)
         {
+            Debug.Log("Allah");
             Instantiate(aguments.Agument);
-            agumentUIManager.AgumentSystem.Aguments[agumentIndex].available = false;
+            string agumentTag = aguments.AgumentTag;
+            GameObject taggedObject = GameObject.FindGameObjectWithTag(agumentTag);
+
+            if (taggedObject != null)
+            {
+                IClickable clickable = taggedObject.GetComponent<IClickable>();
+
+                if (clickable != null)
+                {
+                    clickable.Click();
+                    
+                    agumentUIManager.AgumentSystem.Aguments[aguments.AgumentIndex].available = false;
+                }
+                else
+                {
+                    Debug.LogError("IClickable bileþeni bulunamadý.");
+                }
+            }
+            else
+            {
+                Debug.LogError("Etiketle eþleþen oyun nesnesi bulunamadý.");
+            }
         }
 
     }

@@ -1,7 +1,7 @@
 
 using UnityEngine;
 
-public class WaistStrength : MonoBehaviour
+public class WaistStrength : MonoBehaviour , IClickable
 {
     public static WaistStrength instance;
     private void Awake() => instance = this;
@@ -10,25 +10,26 @@ public class WaistStrength : MonoBehaviour
 
     public float[] currentDamage;
 
-    private void OnEnable()
+    //private void OnEnable()
+    //{
+    //    for (int i = 0; i < bullets.Length; i++)
+    //    {
+    //        currentDamage[i] = bullets[i].bulletDamage;
+    //    }
+    //}
+    //private void OnDisable()
+    //{
+    //    for (int i = 0; i < bullets.Length; i++)
+    //    {
+    //        bullets[i].bulletDamage = currentDamage[i];
+    //    }
+    //}
+    public void Click()
     {
-        for (int i = 0; i < bullets.Length; i++)
-        {
-            currentDamage[i] = bullets[i].bulletDamage;
-        }
-    }
-    private void OnDisable()
-    {
-        for (int i = 0; i < bullets.Length; i++)
-        {
-            bullets[i].bulletDamage = currentDamage[i];
-        }
-    }
-    private void Start()
-    {
-        for (int i = 0; i < bullets.Length; i++)
-        {
-            bullets[i].bulletDamage = bullets[i].bulletDamage + (bullets[i].bulletDamage * 10) / 100;
-        }
+        Debug.Log("BelineKuvvet");
+        //for (int i = 0; i < bullets.Length; i++)
+        //{
+        //    bullets[i].bulletDamage = bullets[i].bulletDamage + (bullets[i].bulletDamage * 10) / 100;
+        //}
     }
 }

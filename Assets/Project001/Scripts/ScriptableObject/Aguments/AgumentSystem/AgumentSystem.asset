@@ -13,8 +13,6 @@ MonoBehaviour:
   m_Name: AgumentSystem
   m_EditorClassIdentifier: 
   Aguments:
-  - agument: {fileID: 11400000, guid: d19a28fa83facc24593028a8eb7d89a0, type: 2}
-    available: 1
   - agument: {fileID: 11400000, guid: f8521db813e0e8548a90e7b93a6f3f9c, type: 2}
     available: 1
   - agument: {fileID: 11400000, guid: 2f018705d1c4ad247b4ee7e50c2bfcea, type: 2}
@@ -23,15 +21,5 @@ MonoBehaviour:
     available: 1
   - agument: {fileID: 11400000, guid: 8dbb68770e40877498f941dffc88a113, type: 2}
     available: 1
-  - agument: {fileID: 11400000, guid: 8dbb68770e40877498f941dffc88a113, type: 2}
-    available: 1
-  - agument: {fileID: 11400000, guid: 8dbb68770e40877498f941dffc88a113, type: 2}
-    available: 1
-  - agument: {fileID: 11400000, guid: 8dbb68770e40877498f941dffc88a113, type: 2}
-    available: 1
-  - agument: {fileID: 11400000, guid: 8dbb68770e40877498f941dffc88a113, type: 2}
-    available: 1
-  - agument: {fileID: 11400000, guid: 8dbb68770e40877498f941dffc88a113, type: 2}
-    available: 1
-  - agument: {fileID: 11400000, guid: 8dbb68770e40877498f941dffc88a113, type: 2}
+  - agument: {fileID: 11400000, guid: d19a28fa83facc24593028a8eb7d89a0, type: 2}
     available: 1
