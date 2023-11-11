@@ -10,25 +10,18 @@ public class AgumentUI : MonoBehaviour
     public AgumentUIManager agumentUIManager;
     public SOAgument aguments = null;
 
-    private void Awake()
-    {
-        //this.gameObject.AddComponent<Button>();
-    }
     public void Setup(SOAgument _agument)
     {
         agumentImage.sprite = _agument.agumentImage;
         agumentName.text = _agument.agumentName;
         agumentDescription.text = _agument.agumentDescreption;
         aguments = _agument;
-        //gameObject.GetComponent<Button>().onClick.AddListener(delegate { OnclickAgument(); });
-        Debug.Log("Sayý");
     }
 
     public void OnclickAgument()
     {
         if (aguments is not null)
         {
-            Debug.Log("Allah");
             Instantiate(aguments.Agument);
             string agumentTag = aguments.AgumentTag;
             GameObject taggedObject = GameObject.FindGameObjectWithTag(agumentTag);
