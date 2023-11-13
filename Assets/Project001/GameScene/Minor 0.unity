@@ -1347,6 +1347,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1319668849}
+  - component: {fileID: 1319668850}
   m_Layer: 0
   m_Name: SkillManagment
   m_TagString: Untagged
@@ -1369,6 +1370,35 @@ Transform:
   m_Father: {fileID: 1316114010}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1319668850
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1319668848}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a72c293b15ff4ea4abd3aff1f31858f7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  skillButtons:
+  - {fileID: 815363303}
+  - {fileID: 1728250157}
+  - {fileID: 1627995557}
+  - {fileID: 1863634781}
+  - {fileID: 1211632964}
+  - {fileID: 765981543}
+  - {fileID: 1450920647}
+  buttons:
+  - {fileID: 815363303}
+  - {fileID: 1728250157}
+  - {fileID: 1627995557}
+  - {fileID: 1863634781}
+  - {fileID: 1211632964}
+  - {fileID: 765981543}
+  - {fileID: 1450920647}
+  skillSystem: {fileID: 11400000, guid: 55bb9bbd35077d745b0acd4fa11b5169, type: 2}
 --- !u!1 &1363837616
 GameObject:
   m_ObjectHideFlags: 0
