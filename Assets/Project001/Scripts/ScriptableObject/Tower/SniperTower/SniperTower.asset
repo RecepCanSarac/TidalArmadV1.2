@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   towerId: "SN\u0130PER_TOWER"
   towerName: Sniper Tower
-  towerDescription: Long Attack Range Low Damage
+  towerDescription: Uzun Menzil Az Hasar
   buildPrice: 250
   upgradeList:
   - {fileID: 11400000, guid: fde35448e672f704bb1f766a7dde2331, type: 2}

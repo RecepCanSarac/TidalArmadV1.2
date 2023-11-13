@@ -17,4 +17,5 @@ MonoBehaviour:
   agumentImage: {fileID: -1621897279, guid: 884b8722208a56346a4ca41767349c6c, type: 3}
   agumentName: +200Gold
   agumentDescreption: +200Gold
+  aktiveAgument: 1
   Agument: {fileID: 7441955519018050279, guid: 5e5fe4f4dedea824cb93042c1a65f0a2, type: 3}

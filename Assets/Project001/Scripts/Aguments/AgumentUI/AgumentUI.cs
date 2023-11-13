@@ -10,6 +10,7 @@ public class AgumentUI : MonoBehaviour
     public AgumentUIManager agumentUIManager;
     public SOAgument aguments = null;
 
+    public SOSkillSystem skillSystem;
     public void Setup(SOAgument _agument)
     {
         agumentImage.sprite = _agument.agumentImage;
@@ -33,8 +34,14 @@ public class AgumentUI : MonoBehaviour
                 if (clickable != null)
                 {
                     clickable.Click();
-                    
+
                     agumentUIManager.AgumentSystem.Aguments[aguments.AgumentIndex].available = false;
+                        
+                    if (agumentUIManager.AgumentSystem.Aguments[aguments.AgumentIndex].agument.aktiveAgument == true)
+                    {
+                        skillSystem.SkilList[aguments.AgumentIndex].isAvailable = true;
+                        Debug.Log(skillSystem.SkilList[aguments.AgumentIndex].isAvailable);
+                    }
                 }
                 else
                 {

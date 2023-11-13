@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   towerId: BASIC_TOWER
   towerName: Basic Tower
-  towerDescription: 
+  towerDescription: Normal Menzil Normal Hasar
   buildPrice: 100
   upgradeList:
   - {fileID: 11400000, guid: b41afb4003b744c4d8a44037f4549696, type: 2}

@@ -10,10 +10,6 @@ public class AgumentUIManager : MonoBehaviour
 
     private void Start()
     {
-        for (int i = 0; i < panel.Length; i++)
-        {
-            panel[i].AddComponent<Button>();
-        }
         SetRandomAgument();
     }
 

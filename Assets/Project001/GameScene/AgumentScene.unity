@@ -819,6 +819,7 @@ MonoBehaviour:
   agumentDescription: {fileID: 2075888983}
   agumentUIManager: {fileID: 459367827}
   aguments: {fileID: 0}
+  skillSystem: {fileID: 11400000, guid: 55bb9bbd35077d745b0acd4fa11b5169, type: 2}
 --- !u!114 &690194176
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1011,6 +1012,7 @@ MonoBehaviour:
   agumentDescription: {fileID: 896261403}
   agumentUIManager: {fileID: 459367827}
   aguments: {fileID: 0}
+  skillSystem: {fileID: 11400000, guid: 55bb9bbd35077d745b0acd4fa11b5169, type: 2}
 --- !u!114 &701037570
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1127,6 +1129,7 @@ MonoBehaviour:
   agumentDescription: {fileID: 240482219}
   agumentUIManager: {fileID: 459367827}
   aguments: {fileID: 0}
+  skillSystem: {fileID: 11400000, guid: 55bb9bbd35077d745b0acd4fa11b5169, type: 2}
 --- !u!114 &718548915
 MonoBehaviour:
   m_ObjectHideFlags: 0

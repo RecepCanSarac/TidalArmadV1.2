@@ -9,5 +9,8 @@ public class SOAgument : ScriptableObject
     public Sprite agumentImage;
     public string agumentName;
     public string agumentDescreption;
+
+    public bool aktiveAgument;
+
     public GameObject Agument;
 }
