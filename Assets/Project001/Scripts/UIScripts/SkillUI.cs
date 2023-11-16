@@ -24,10 +24,13 @@ public class SkillUI : MonoBehaviour
                 if (skillSystem.SkilList[i].isAvailable)
                 {
                     buttons[i].SetActive(true);
+                    buttons[i].GetComponentInChildren<Image>().sprite = skillSystem.SkilList[i].skil.SkillSprite;
+                    buttons[i].GetComponent<SkillButton>().skill = skillSystem.SkilList[i].skil;
                 }
                 else
                 {
                     buttons[i].SetActive(false);
+
                 }
             }
          

@@ -344,7 +344,7 @@ GameObject:
   - component: {fileID: 2692097663583696689}
   m_Layer: 6
   m_Name: Basic Tower 00
-  m_TagString: Untagged
+  m_TagString: Tower
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -381,6 +381,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   bulletSpawnPoint: {fileID: 2692097662929869307}
   bulletText: {fileID: 2692097662726374066}
+  tower: {fileID: 11400000, guid: b41afb4003b744c4d8a44037f4549696, type: 2}
 --- !u!114 &2692097663583696689
 MonoBehaviour:
   m_ObjectHideFlags: 0

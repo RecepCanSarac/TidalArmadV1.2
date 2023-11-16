@@ -17,6 +17,7 @@ TagManager:
   - MoreGold
   - RandomEnemyGold
   - FastAttackSpeed
+  - RageSkill
   layers:
   - Default
   - TransparentFX

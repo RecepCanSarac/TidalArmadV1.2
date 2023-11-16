@@ -12,6 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e018143838b2f9844b59325ba840bcaa, type: 3}
   m_Name: Skill 01
   m_EditorClassIdentifier: 
-  SkillName: Skill 01
+  SkillName: RageSkill
   SkillSprite: {fileID: 21300000, guid: e9d4143c19529834981ac6821a04aecd, type: 3}
-  SkillPrefab: {fileID: 0}
+  SkillPrefab: {fileID: 2779595783898327291, guid: 5f57bbe268e6b0d4eaeaf8d5cdce644e,
+    type: 3}

@@ -12,7 +12,7 @@ public class TowerObject : MonoBehaviour, IPointerClickHandler
 
     public SOTowerLevel TowerData { get; set; }
 
-
+    public SOTowerLevel tower;
     SOBullet bulletData;
     private int bulletIndex;
     private int bulletCount;
