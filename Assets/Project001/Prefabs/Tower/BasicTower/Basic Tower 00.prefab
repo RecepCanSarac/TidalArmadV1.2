@@ -382,6 +382,7 @@ MonoBehaviour:
   bulletSpawnPoint: {fileID: 2692097662929869307}
   bulletText: {fileID: 2692097662726374066}
   tower: {fileID: 11400000, guid: b41afb4003b744c4d8a44037f4549696, type: 2}
+  Name: 
 --- !u!114 &2692097663583696689
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -398,6 +399,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 128
   towerHead: {fileID: 2692097663397476184}
+  towerBottom: {fileID: 2692097664086594622}
 --- !u!1 &2692097664086594593
 GameObject:
   m_ObjectHideFlags: 0

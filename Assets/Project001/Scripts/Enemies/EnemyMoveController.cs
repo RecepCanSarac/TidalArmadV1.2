@@ -5,7 +5,7 @@ public class EnemyMoveController : MonoBehaviour
     public SOEnemy enemy;
 
     public float currentSpeed;
-    private float currentHealth;
+    public float currentHealth;
     private float currentDamage;
 
     private Rigidbody2D rb;
@@ -21,6 +21,7 @@ public class EnemyMoveController : MonoBehaviour
     }
     private void Update()
     {
+
         Invoke("FindTarget", 0.5f);
         if (currentHealth <= 0)
             Destroy(this.gameObject);
@@ -63,6 +64,10 @@ public class EnemyMoveController : MonoBehaviour
         {
             currentSpeed = enemy.speed;
         }
+    }
+    private void OnParticleCollision(GameObject other)
+    {
+        currentHealth -= other.gameObject.GetComponent<FlameBullet>().level.damage;
     }
 
 }

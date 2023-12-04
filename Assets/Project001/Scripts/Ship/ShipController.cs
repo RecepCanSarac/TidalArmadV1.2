@@ -1,10 +1,13 @@
+using UnityEditor.SearchService;
 using UnityEngine;
+using UnityEngine.SceneManagement;
+using UnityEngine.SocialPlatforms;
 
 public class ShipController : MonoBehaviour
 {
     public SOShip ship;
     public SOShipUpgradeble upgradeble;
-    private float currentSpeed;
+    public float currentSpeed;
     public float currentHealth;
     private Rigidbody2D rb;
     private bool isFacingRight = true;
@@ -18,24 +21,34 @@ public class ShipController : MonoBehaviour
 
     private void Update()
     {
-        float horizontalMove = Input.GetAxisRaw("Horizontal");
-        rb.velocity = new Vector2(horizontalMove * currentSpeed * Time.deltaTime, rb.velocity.y);
+        if (SceneManager.GetActiveScene().buildIndex != 3)
+        {
+            float hareketInput = Input.GetAxis("Horizontal");
+            rb.velocity = new Vector2(hareketInput * currentSpeed * Time.deltaTime, 0f);
 
-        //if (horizontalMove > 0 && !isFacingRight)
-        //{
-        //    FlipShip();
-        //}
-        //else if (horizontalMove < 0 && isFacingRight)
-        //{
-        //    FlipShip();
-        //}
+            if (!Mathf.Approximately(hareketInput, 0f))
+            {
+                // Ship is moving, update rotation based on input
+                Quaternion hedefRotasyon = Quaternion.Euler(0f, hareketInput < 0 ? 180f : 0f, 0f);
+                transform.rotation = Quaternion.Lerp(transform.rotation, hedefRotasyon, 5 * Time.deltaTime);
+            }
+            else
+            {
+                // Ship is not moving, fix rotation to either 0 or 180
+                Quaternion hedefRotasyon = Quaternion.Euler(0f, isFacingRight ? 0f : 180f, 0f);
+                transform.rotation = Quaternion.Lerp(transform.rotation, hedefRotasyon, 5 * Time.deltaTime);
+            }
+
+            // Update isFacingRight based on the current input
+            if (hareketInput > 0)
+            {
+                isFacingRight = true;
+            }
+            else if (hareketInput < 0)
+            {
+                isFacingRight = false;
+            }
+        }
     }
 
-    private void FlipShip()
-    {
-        isFacingRight = !isFacingRight;
-        Vector3 scale = transform.localScale;
-        scale.x *= -1;
-        transform.localScale = scale;
-    }
 }

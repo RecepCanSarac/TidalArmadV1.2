@@ -27,7 +27,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 9181502046914974038}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.81, y: 0.13, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0.3, y: 0.3, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -116,6 +116,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   buildableTowerList:
-  - {fileID: 11400000, guid: aed261630c6d48a43a1e414954e20a76, type: 2}
-  - {fileID: 11400000, guid: aed261630c6d48a43a1e414954e20a76, type: 2}
-  - {fileID: 11400000, guid: aed261630c6d48a43a1e414954e20a76, type: 2}
+  - {fileID: 11400000, guid: 3795471cad1f07c4b8fb9ce12963a14b, type: 2}
+  - {fileID: 11400000, guid: 8230541de2e452848942701fb7d2bf81, type: 2}
+  - {fileID: 11400000, guid: 3795471cad1f07c4b8fb9ce12963a14b, type: 2}

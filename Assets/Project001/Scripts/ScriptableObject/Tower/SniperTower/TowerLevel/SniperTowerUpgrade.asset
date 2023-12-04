@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 106264ef47cf66046a403504256d9241, type: 3}
   m_Name: SniperTowerUpgrade
   m_EditorClassIdentifier: 
-  towerIcon: {fileID: 21300000, guid: 8f658c76a2da06848bc75b4b3f150f6c, type: 3}
+  towerIcon: {fileID: -1511520319, guid: f29d4e305cf124d4dab113bae9a79014, type: 3}
   upgradePrice: 275
   detectRange: 7
   attackSpeed: 1

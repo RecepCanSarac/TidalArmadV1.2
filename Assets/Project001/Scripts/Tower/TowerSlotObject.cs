@@ -1,3 +1,4 @@
+using DG.Tweening;
 using System;
 using System.Collections.Generic;
 using UnityEngine;
@@ -17,11 +18,13 @@ public class TowerSlotObject : MonoBehaviour, IPointerClickHandler
     private SOTower currentTowerData;
     private TowerObject currentTower;
 
+    private Transform Ship;
     
     public event Action<TowerSlotObject> OnLeftClickEvent;
 
     private void Start()
     {
+        Ship = GameObject.FindGameObjectWithTag("Ship").transform;
         sp = GetComponent<SpriteRenderer>();
         col = GetComponent<Collider2D>();
     }
@@ -51,7 +54,17 @@ public class TowerSlotObject : MonoBehaviour, IPointerClickHandler
 
         BuildLevel = index;
         currentTowerData = buildableTowerList[index];
-        currentTower = Instantiate(buildableTowerList[index].upgradeList[TowerLevel].towerPrefab, transform).GetComponent<TowerObject>();
+        if (transform.position.x > Ship.transform.position.x)
+        {
+            currentTower = Instantiate(buildableTowerList[index].upgradeList[TowerLevel].towerPrefab, transform).GetComponent<TowerObject>();
+            currentTower.transform.localScale = new Vector3(2, 2, 2);
+        }
+        else
+        {
+            currentTower = Instantiate(buildableTowerList[index].upgradeList[TowerLevel].towerPrefab, transform).GetComponent<TowerObject>();
+            currentTower.transform.localScale = new Vector3(-2, 2, 2);
+        }
+       
         currentTowerData.Build();
         currentTower.TowerData = buildableTowerList[index].upgradeList[TowerLevel];
         BuyBullet(BulletManager.instance.GetBulletData(0), 0);

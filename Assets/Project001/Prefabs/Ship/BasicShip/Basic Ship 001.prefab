@@ -105,6 +105,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ship: {fileID: 11400000, guid: eda199ab9ec7d184fbb4cf61a98ec870, type: 2}
   upgradeble: {fileID: 11400000, guid: c6522dc5dee0b084892769df137a4d80, type: 2}
+  currentHealth: 0
 --- !u!50 &5061727543145870860
 Rigidbody2D:
   serializedVersion: 4
@@ -216,12 +217,12 @@ PrefabInstance:
     - target: {fileID: 2605103507719822447, guid: 4c2db586875d1e0429b344e5649d24bb,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 1.13
+      value: -0.906
       objectReference: {fileID: 0}
     - target: {fileID: 2605103507719822447, guid: 4c2db586875d1e0429b344e5649d24bb,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.204
+      value: -1.044
       objectReference: {fileID: 0}
     - target: {fileID: 2605103507719822447, guid: 4c2db586875d1e0429b344e5649d24bb,
         type: 3}
@@ -390,12 +391,12 @@ PrefabInstance:
     - target: {fileID: 1936446946706616889, guid: 177813ed25f20d147b5e1020b157eaac,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.8117846
+      value: 1.108
       objectReference: {fileID: 0}
     - target: {fileID: 1936446946706616889, guid: 177813ed25f20d147b5e1020b157eaac,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -1.0090852
+      value: -0.228
       objectReference: {fileID: 0}
     - target: {fileID: 1936446946706616889, guid: 177813ed25f20d147b5e1020b157eaac,
         type: 3}

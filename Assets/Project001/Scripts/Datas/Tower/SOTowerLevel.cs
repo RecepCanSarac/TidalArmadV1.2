@@ -12,5 +12,7 @@ public class SOTowerLevel : ScriptableObject
     public float detectRange;
     public float attackSpeed;
 
+    public float damage;
+
     public GameObject towerPrefab;
 }

@@ -116,6 +116,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   buildableTowerList:
-  - {fileID: 11400000, guid: aed261630c6d48a43a1e414954e20a76, type: 2}
-  - {fileID: 11400000, guid: aed261630c6d48a43a1e414954e20a76, type: 2}
-  - {fileID: 11400000, guid: aed261630c6d48a43a1e414954e20a76, type: 2}
+  - {fileID: 11400000, guid: 9cfd27a6b630d3e409d101129aee22db, type: 2}
+  - {fileID: 11400000, guid: 53fbab8d91920b743b920c65c38fc5ee, type: 2}
+  - {fileID: 11400000, guid: 7e484741fd5b5434991ccc09b92b34f7, type: 2}

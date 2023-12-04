@@ -1,7 +1,6 @@
 using System.Linq;
 using UnityEngine;
 
-[RequireComponent(typeof(TowerObject))]
 public class TowerController : MonoBehaviour
 {
     private TowerObject obj;
@@ -14,6 +13,9 @@ public class TowerController : MonoBehaviour
     bool isMirrored = false;
     float attackRate = 0;
 
+
+    public GameObject supportBullet;
+    public Transform point;
     private void Start()
     {
         obj = GetComponent<TowerObject>();
@@ -52,17 +54,35 @@ public class TowerController : MonoBehaviour
     void Attack()
     {
         attackRate += Time.deltaTime;
-        if (nearestEnemy != null)
+
+        if (attackRate > obj.TowerData.attackSpeed / 1)
         {
-            if (attackRate > obj.TowerData.attackSpeed / 1)
+            if (nearestEnemy != null)
             {
-                obj.SpawnBullet(nearestEnemy.position, towerHead.localScale.x);
+                if (supportBullet != null)
+                {
+                    GameObject bullet = Instantiate(supportBullet, transform.position, Quaternion.identity);
+
+                    SupportBullet bulletMovement = bullet.GetComponent<SupportBullet>();
+                    if (bulletMovement != null)
+                    {
+                        bulletMovement.SetTarget(nearestEnemy);
+                    }
+                }
+                else
+                {
+                    // If supportBullet is not set, use the existing SpawnBullet method
+                    obj.SpawnBullet(nearestEnemy.position, towerHead.localScale.x);
+                }
+
                 attackRate = 0;
             }
         }
-       
+
+        // Rotate to face the target
         RotateToTarget();
     }
+
 
     private void RotateToTarget()
     {

@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Basic Ship 001
   m_EditorClassIdentifier: 
   health: 150
-  speed: 350
+  speed: 800
   price: 125
   ShipPrefab: {fileID: 2670458053724909226, guid: 19146337aa6841040953a3bcde00cc17,
     type: 3}

@@ -1,0 +1,22 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 73142ef01f395f04ca5aa03d0324c749, type: 3}
+  m_Name: BigTowerUpgrade
+  m_EditorClassIdentifier: 
+  towerId: BIG_TOWER
+  towerName: Big Tower
+  towerDescription: Hight Damage Slow Attack Speed
+  buildPrice: 75
+  upgradeList:
+  - {fileID: 11400000, guid: ecc03f557480d7b4da820d21e328725a, type: 2}
+  - {fileID: 11400000, guid: 1520a7cbb10155342bd58331b0ae0f84, type: 2}
+  - {fileID: 11400000, guid: 72c37362b2b0ecb43b6601e781382424, type: 2}

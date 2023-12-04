@@ -1,0 +1,20 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 106264ef47cf66046a403504256d9241, type: 3}
+  m_Name: HealthTower 02
+  m_EditorClassIdentifier: 
+  towerIcon: {fileID: -1338403124, guid: f29d4e305cf124d4dab113bae9a79014, type: 3}
+  upgradePrice: 20
+  detectRange: 0
+  attackSpeed: 12
+  towerPrefab: {fileID: 2692097663583696691, guid: 4d8592dd982b2564eb57b5dc170f8838,
+    type: 3}

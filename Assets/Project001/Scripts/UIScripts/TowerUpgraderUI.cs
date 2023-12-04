@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -7,11 +5,13 @@ public class TowerUpgraderUI : MonoBehaviour
 {
     [SerializeField] Button towerUpgradePanelButton;
     [SerializeField] Button bulletUpgradePanelButton;
+    [SerializeField] GameObject bulletUpgradePanelObje;
 
     [SerializeField] private UpgradePanelUI upgradePanelUI;
     [SerializeField] private BulletUpgradeUI bulletUpgradeUI;
 
     private TowerSlotObject currentSlot;
+
 
     bool isActive = false;
 
@@ -40,8 +40,20 @@ public class TowerUpgraderUI : MonoBehaviour
 
         if (isActive)
         {
-            Show();
-
+            foreach (var slot in currentSlot.buildableTowerList)
+            {
+                Show();
+                if (slot.towerName != "support")
+                {
+                    bulletUpgradePanelButton.interactable = true;
+                    bulletUpgradePanelObje.SetActive(true);
+                }
+                else
+                {
+                    bulletUpgradePanelButton.interactable = false;
+                    bulletUpgradePanelObje.SetActive(false);
+                }
+            }
             if (!currentSlot.TowerUpgradeCompleted())
                 upgradePanelUI.SetupPanel(this.currentSlot);
         }

@@ -1511,6 +1511,8 @@ MonoBehaviour:
   - {fileID: 1211632964}
   - {fileID: 765981543}
   - {fileID: 1450920647}
+  skils: []
+  skillSystem: {fileID: 11400000, guid: 55bb9bbd35077d745b0acd4fa11b5169, type: 2}
 --- !u!1 &1363837616
 GameObject:
   m_ObjectHideFlags: 0

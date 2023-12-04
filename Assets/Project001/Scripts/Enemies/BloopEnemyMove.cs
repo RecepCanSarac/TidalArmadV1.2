@@ -5,6 +5,7 @@ public class BloopEnemyMove : MonoBehaviour
     public float amplitude = 1f;
     public float frequency = 1f;
     public float xMove = 0.01f;
+    public float currentXMove, currnetFrequency;
     public Transform hitPoint;
     public SOEnemy bloopEnemy;
     private float currentHealth;
@@ -17,6 +18,8 @@ public class BloopEnemyMove : MonoBehaviour
     private BloopEnemyAttack attack;
     private void Start()
     {
+        currentXMove = xMove;
+        currnetFrequency = frequency;
         Invoke("FindTarget", 0.5f);
         initialPosition = transform.position;
         attack = GetComponent<BloopEnemyAttack>();

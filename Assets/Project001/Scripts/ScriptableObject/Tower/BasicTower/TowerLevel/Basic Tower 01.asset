@@ -12,9 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 106264ef47cf66046a403504256d9241, type: 3}
   m_Name: Basic Tower 01
   m_EditorClassIdentifier: 
-  towerIcon: {fileID: 21300000, guid: 28994f74c4a5f454c92b1e3d04d3f15a, type: 3}
+  towerIcon: {fileID: -775709209, guid: f29d4e305cf124d4dab113bae9a79014, type: 3}
   upgradePrice: 100
   detectRange: 5
-  attackSpeed: 2
+  attackSpeed: 5
+  damage: 0
   towerPrefab: {fileID: 2692097663583696691, guid: 983b3720bbd2ce54d97044b4ba83aec1,
     type: 3}

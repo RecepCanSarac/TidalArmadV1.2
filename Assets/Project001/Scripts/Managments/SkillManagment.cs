@@ -7,6 +7,7 @@ public class SkillManagment : MonoBehaviour
 {
     [SerializeField] List<Button> buttons = new List<Button>();
     [SerializeField] List<SOSkill> skils = new List<SOSkill>();
+    public SOSkillSystem skillSystem;
     GameObject skil;
     void Update()
     {
@@ -14,7 +15,8 @@ public class SkillManagment : MonoBehaviour
         {
             if (Input.GetKeyDown(i.ToString()))
             {
-                PressButton(i);
+                int index = i;
+                PressButton(index);
             }
         }
 
@@ -32,26 +34,54 @@ public class SkillManagment : MonoBehaviour
     }
     void PressButton(int buttonIndex)
     {
-        if (buttonIndex >= 1 && buttonIndex <= buttons.Count)
+        if ((buttonIndex >= 0 && buttonIndex < buttons.Count) && skillSystem.SkilList[buttonIndex -1].isAvailable == true)
         {
             AktiveSkill(buttonIndex);
             Debug.Log(buttonIndex);
         }
+        //else
+        //{
+        //    Debug.LogError("Geçersiz button indeksi: " + buttonIndex);
+        //}
     }
 
     public void AktiveSkill(int buttonIndex)
     {
-        string skilName = skils[buttonIndex].SkillName;
-        GameObject skil = GameObject.FindGameObjectWithTag(nameof(skilName));
-        if (skil != null)
+        Debug.Log("buttonIndex: " + buttonIndex);
+
+        if (skils != null && buttonIndex > 0 && buttonIndex <= skils.Count)
         {
-            ISelectedSkill skill = skil.GetComponent<ISelectedSkill>();
-            if (skill != null)
+            string skilName = skils[buttonIndex -1].SkillName;
+            Debug.Log("skilName: " + skilName);
+
+            GameObject skil = GameObject.FindGameObjectWithTag(skilName);
+
+            if (skil != null)
             {
-                skill.ActivitedSkill();
-                Debug.Log("Çalýþýyor");
+                ISelectedSkill skill = skil.GetComponent<ISelectedSkill>();
+                if (skill != null)
+                {
+                    skill.ActivitedSkill();
+                    Debug.Log("Çalýþýyor");
+                }
+                else
+                {
+                    Debug.LogError("ISelectedSkill bileþeni bulunamadý.");
+                }
+            }
+            else
+            {
+                Debug.LogError("Skil nesnesi null.");
             }
         }
-
+        else
+        {
+            Debug.LogError("Geçersiz skill indeksi: " + buttonIndex);
+        }
     }
+
+
+
 }
+
+

@@ -7,7 +7,7 @@ public class EconomyManager : MonoBehaviour
     void Awake() => instance = this;
     #endregion
 
-    public float Gold { get; private set; } = 500;
+    public float Gold { get; private set; } = 500000;
 
     public void DecreaseGold(float amount)
     {

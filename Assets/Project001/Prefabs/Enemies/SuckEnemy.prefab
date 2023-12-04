@@ -117,6 +117,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enemy: {fileID: 11400000, guid: 3e83b18729703d143aa7169a8659070c, type: 2}
   currentSpeed: 0
+  currentHealth: 0
 --- !u!50 &-8657114979997818144
 Rigidbody2D:
   serializedVersion: 4
@@ -137,7 +138,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 4
+  m_Constraints: 6
 --- !u!60 &3178559251406088038
 PolygonCollider2D:
   m_ObjectHideFlags: 0

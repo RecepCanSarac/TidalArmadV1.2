@@ -1,0 +1,20 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 106264ef47cf66046a403504256d9241, type: 3}
+  m_Name: SpeedTower 01
+  m_EditorClassIdentifier: 
+  towerIcon: {fileID: -1549480724, guid: 73a4bf085343ea4438e8bffcbf0b099f, type: 3}
+  upgradePrice: 0
+  detectRange: 0
+  attackSpeed: 50
+  towerPrefab: {fileID: 2692097663583696691, guid: 055cb90558469f34c9a6e8e967e3e0c3,
+    type: 3}

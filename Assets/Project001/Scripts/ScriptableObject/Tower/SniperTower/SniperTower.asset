@@ -18,3 +18,5 @@ MonoBehaviour:
   buildPrice: 250
   upgradeList:
   - {fileID: 11400000, guid: fde35448e672f704bb1f766a7dde2331, type: 2}
+  - {fileID: 11400000, guid: 045ebe6b6840586489e69dd1cb51bb93, type: 2}
+  - {fileID: 11400000, guid: 9f3dcd471005e13469540a95299271bd, type: 2}

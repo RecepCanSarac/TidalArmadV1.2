@@ -1,4 +1,5 @@
 using System;
+using System.Reflection;
 using System.Text;
 using TMPro;
 using UnityEngine;
@@ -17,6 +18,10 @@ public class TowerObject : MonoBehaviour, IPointerClickHandler
     private int bulletIndex;
     private int bulletCount;
 
+    public string Name;
+
+    private Transform Ship;
+
     public event Action<TowerObject> OnLeftClickEvent;
     public event Action<TowerObject> OnBulletIsEnd;
     public void OnPointerClick(PointerEventData eventData)
@@ -29,7 +34,18 @@ public class TowerObject : MonoBehaviour, IPointerClickHandler
             }
         }
     }
-
+    private void Start()
+    {
+        Ship = GameObject.FindGameObjectWithTag("Ship").transform;
+        if (transform.position.x > Ship.transform.position.x)
+        {
+           transform.localScale = new Vector3(2, 2, 2);
+        }
+        else
+        {
+           transform.localScale = new Vector3(-2, 2, 2);
+        }
+    }
     public int GetBulletIndex() => bulletIndex;
     public int GetBulletCount() => bulletCount;
 
@@ -62,8 +78,11 @@ public class TowerObject : MonoBehaviour, IPointerClickHandler
         bulletData = bullet;
         bulletIndex = index;
         bulletCount = count;
-
-        bulletText.text = BuildBulletText();
+        if (bulletText != null)
+        {
+            bulletText.text = BuildBulletText();    
+        }
+        
     }
 
     public void OnChangeTower(SOBullet bullet, int index, int count)
@@ -94,7 +113,11 @@ public class TowerObject : MonoBehaviour, IPointerClickHandler
         }
 
         bullet.Added();
-        bulletText.text = BuildBulletText();
+        if (bulletText != null)
+        {
+            bulletText.text = BuildBulletText();
+        }
+      
         //Add 
     }
 
