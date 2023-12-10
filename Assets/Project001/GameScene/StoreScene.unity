@@ -3361,6 +3361,8 @@ MonoBehaviour:
     count: 50
   - bulletData: {fileID: 11400000, guid: 6d0f044b3b3f9854ca4cd3963305e4ff, type: 2}
     count: 50
+  - bulletData: {fileID: 11400000, guid: bb4983d3e400d044ca2a96a11ab051ab, type: 2}
+    count: 50
 --- !u!1 &1138082331
 GameObject:
   m_ObjectHideFlags: 0

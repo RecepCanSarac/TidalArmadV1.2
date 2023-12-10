@@ -359,7 +359,7 @@ Transform:
   m_GameObject: {fileID: 2692097663583696691}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 2, y: 2, z: 1}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 2692097664086594622}
@@ -382,7 +382,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   bulletSpawnPoint: {fileID: 2692097662929869307}
   bulletText: {fileID: 2692097662726374066}
+  FlameTroper: {fileID: 0}
   tower: {fileID: 11400000, guid: eb468430083dc94419683b741738c259, type: 2}
+  Name: 
 --- !u!114 &2692097663583696689
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -399,6 +401,9 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 0
   towerHead: {fileID: 2692097663397476184}
+  isActive: 0
+  supportBullet: {fileID: 0}
+  point: {fileID: 0}
 --- !u!114 &2739696029834153767
 MonoBehaviour:
   m_ObjectHideFlags: 0

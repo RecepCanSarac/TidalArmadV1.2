@@ -24,7 +24,6 @@ public class BulletObject : MonoBehaviour
         this.targetPoint = targetPoint;
         startPoint = transform.position;
         scaleMultiplier = scale;
-        //damage = data.bulletDamage; // Bu satýrý neden yorum satýrýna aldýnýz bilmiyorum, gerekirse açabilirsiniz.
     }
 
     private void Update()
@@ -36,7 +35,9 @@ public class BulletObject : MonoBehaviour
     {
         transform.position = CalculatePoint();
 
-        // Eðer hedefe ulaþýldýysa yok ol.
+        // Ensure the rotation stays constant
+        transform.rotation = Quaternion.identity;
+
         if (Vector3.Distance(transform.position, targetPoint) < 0.1f)
         {
             DestroyBullet();
@@ -45,7 +46,6 @@ public class BulletObject : MonoBehaviour
 
     private void DestroyBullet()
     {
-        // Buraya gerekirse baþka kodlar ekleyebilirsiniz, örneðin patlama efekti veya skor artýþý gibi.
         Destroy(gameObject);
     }
 
@@ -65,7 +65,6 @@ public class BulletObject : MonoBehaviour
         EnemyMoveController enemy = other.GetComponent<EnemyMoveController>();
         if (enemy != null)
         {
-            // Destroy the bullet directly
             Destroy(gameObject);
         }
     }

@@ -1,0 +1,22 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 73142ef01f395f04ca5aa03d0324c749, type: 3}
+  m_Name: BarrelShooter
+  m_EditorClassIdentifier: 
+  towerId: BARREL_SHOOTER
+  towerName: Barrel Shooter
+  towerDescription: 
+  buildPrice: 150
+  upgradeList:
+  - {fileID: 11400000, guid: 20232826600fcc142a5ac7ac76ae476e, type: 2}
+  - {fileID: 11400000, guid: 7eb77e03a59a4ce4b978ac2a62963eff, type: 2}
+  - {fileID: 11400000, guid: 354b15e26d348fd45b534dc9273b3c94, type: 2}

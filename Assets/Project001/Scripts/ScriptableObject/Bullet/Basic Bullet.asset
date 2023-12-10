@@ -21,5 +21,5 @@ MonoBehaviour:
   bulletCapacity: 0
   bulletDamage: 25
   bulletSpeed: 150
-  bulletPrefab: {fileID: 2440931480022169044, guid: 64f2ee432b3a72f4ab8afb3fb90998ca,
+  bulletPrefab: {fileID: 2440931480022169044, guid: d6025a30ec437614fb49a0e56e1fcf03,
     type: 3}

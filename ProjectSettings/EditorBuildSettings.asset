@@ -18,6 +18,9 @@ EditorBuildSettings:
     path: Assets/Project001/GameScene/StoreScene.unity
     guid: 5a92fb8b876a45d4baf3be04601b3bf2
   - enabled: 1
+    path: Assets/Project001/GameScene/AgumentScene.unity
+    guid: b2541ddc050002c4caaeb3f021da9d6c
+  - enabled: 1
     path: Assets/Project001/GameScene/Minor 0.unity
     guid: 85241101be2b24a4a81b4b875988f8f6
   m_configObjects: {}

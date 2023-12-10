@@ -17,5 +17,6 @@ public class EconomyManager : MonoBehaviour
     public void IncreaseGold(float amount)
     {
         Gold += amount;
+        Debug.Log(Gold);
     }
 }

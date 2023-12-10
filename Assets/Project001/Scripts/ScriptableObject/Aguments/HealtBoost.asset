@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: a5f16a5e0e92dc04580ea5b9fd412511, type: 3}
-  m_Name: Agument1
+  m_Name: HealtBoost
   m_EditorClassIdentifier: 
   AgumentTag: HealthBust
   AgumentIndex: 4

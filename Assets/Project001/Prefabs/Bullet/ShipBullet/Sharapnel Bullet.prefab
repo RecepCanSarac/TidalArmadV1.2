@@ -13,8 +13,9 @@ GameObject:
   - component: {fileID: 2440931480022169045}
   - component: {fileID: 2440931480022169040}
   - component: {fileID: 9169505224698241317}
+  - component: {fileID: 822996350514368723}
   m_Layer: 0
-  m_Name: BasicBullet
+  m_Name: Sharapnel Bullet
   m_TagString: Bullet
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -77,7 +78,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 549467968, guid: 5db52258447343d47950dbf41df23974, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0, g: 0.23403263, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -136,4 +137,25 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e4f019f75710cbf4c83ab5ee708e8443, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bullet: {fileID: 11400000, guid: 37d25b7c937adf947a4f48a92a51a3c8, type: 2}
+  bulletSpeed: 6
+  rotateSpeed: 20
+  scaleMultiplier: 1
+  damage: 0
+  bullet: {fileID: 11400000, guid: bb4983d3e400d044ca2a96a11ab051ab, type: 2}
+--- !u!114 &822996350514368723
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2440931480022169044}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0c36eb391a9510344a03472410549b80, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  radius: 2
+  impactDamage: 12
+  mask:
+    serializedVersion: 2
+    m_Bits: 128

@@ -1,6 +1,7 @@
 using UnityEngine.UI;
 using TMPro;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class AgumentUI : MonoBehaviour
 {
@@ -9,6 +10,7 @@ public class AgumentUI : MonoBehaviour
     public TextMeshProUGUI agumentDescription;
     public AgumentUIManager agumentUIManager;
     public SOAgument aguments = null;
+
 
     public SOSkillSystem skillSystem;
     public void Setup(SOAgument _agument)
@@ -34,14 +36,16 @@ public class AgumentUI : MonoBehaviour
                 if (clickable != null)
                 {
                     clickable.Click();
-
+                    agumentUIManager.SetRandomAgument();
                     agumentUIManager.AgumentSystem.Aguments[aguments.AgumentIndex].available = false;
-                        
+                    
                     if (agumentUIManager.AgumentSystem.Aguments[aguments.AgumentIndex].agument.aktiveAgument == true)
                     {
                         skillSystem.SkilList[aguments.AgumentIndex].isAvailable = true;
                         Debug.Log(skillSystem.SkilList[aguments.AgumentIndex].isAvailable);
                     }
+
+                    SceneManager.LoadScene("MapGenerator");
                 }
                 else
                 {

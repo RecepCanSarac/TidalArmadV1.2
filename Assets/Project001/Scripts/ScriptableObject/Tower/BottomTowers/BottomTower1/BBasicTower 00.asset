@@ -13,8 +13,9 @@ MonoBehaviour:
   m_Name: BBasicTower 00
   m_EditorClassIdentifier: 
   towerIcon: {fileID: -1521176979, guid: f29d4e305cf124d4dab113bae9a79014, type: 3}
-  upgradePrice: 0
-  detectRange: 0
-  attackSpeed: 0
+  upgradePrice: 70
+  detectRange: 3
+  attackSpeed: 1
+  damage: 30
   towerPrefab: {fileID: 2692097663583696691, guid: 911cad80628c2ff48a88c550fa10261c,
     type: 3}

@@ -47,6 +47,12 @@ public class RandomMapManangment : MonoBehaviour
                 int randomBoss = Random.Range(0, bossLevel.levelNumber.Length);
                 SceneManager.LoadScene("Boss " + randomBoss);
                 break;
+            case NodeType.Store:
+                SceneManager.LoadScene("StoreScene");
+                break;
+            case NodeType.Treasure:
+                SceneManager.LoadScene("AgumentScene");
+                break;
         }
     }
 }

@@ -1,3 +1,4 @@
+using System.Collections;
 using UnityEngine;
 
 public class EnemyMoveController : MonoBehaviour
@@ -57,6 +58,14 @@ public class EnemyMoveController : MonoBehaviour
         {
             currentHealth -= other.gameObject.GetComponent<BulletObject>().bullet.bulletDamage;
         }
+        if (other.gameObject.GetComponent<FireBullet>())
+        {
+            StartCoroutine(Timer(3, true));
+        }
+        if (other.gameObject.GetComponent<SharapnelBullet>())
+        {
+            other.gameObject.GetComponent<SharapnelBullet>().Expolosion();
+        }
     }
     private void OnTriggerExit2D(Collider2D other)
     {
@@ -69,5 +78,23 @@ public class EnemyMoveController : MonoBehaviour
     {
         currentHealth -= other.gameObject.GetComponent<FlameBullet>().level.damage;
     }
-
+  
+    private IEnumerator Timer(float damage, bool contact)
+    {
+        float number = 0;
+        while (contact)
+        {
+            number++;
+            if (number <= 10)
+            {
+                currentHealth -= damage;
+                yield return new WaitForSeconds(1);
+                Debug.Log(number);
+            }
+            if (number >= 10)
+            {
+                contact = false;
+            }
+        }
+    }
 }

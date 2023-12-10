@@ -1685,7 +1685,7 @@ MonoBehaviour:
       UpperSlotNum: 2
       SupportSlotNum: 2
       LowerSlotNum: 2
-      shipIcon: {fileID: 21300000, guid: 8f658c76a2da06848bc75b4b3f150f6c, type: 3}
+      shipIcon: {fileID: -1530397116, guid: 58193c79314fe034bb543b22762724be, type: 3}
       shipPrefab: {fileID: 11400000, guid: c6522dc5dee0b084892769df137a4d80, type: 2}
     - Name: Yusuf
       Description: "HBELBEBLEBLEBLELEBLAS\u015EFJADGLANDLKNASLKNDLASNFLNA"

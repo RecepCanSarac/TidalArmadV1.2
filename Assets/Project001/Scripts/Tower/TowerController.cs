@@ -13,7 +13,7 @@ public class TowerController : MonoBehaviour
     bool isMirrored = false;
     float attackRate = 0;
 
-
+    public bool isActive;
     public GameObject supportBullet;
     public Transform point;
     private void Start()
@@ -71,7 +71,6 @@ public class TowerController : MonoBehaviour
                 }
                 else
                 {
-                    // If supportBullet is not set, use the existing SpawnBullet method
                     obj.SpawnBullet(nearestEnemy.position, towerHead.localScale.x);
                 }
 
@@ -79,8 +78,9 @@ public class TowerController : MonoBehaviour
             }
         }
 
-        // Rotate to face the target
+
         RotateToTarget();
+
     }
 
 
@@ -112,9 +112,12 @@ public class TowerController : MonoBehaviour
 
     private void MirrorObject()
     {
+
         Vector3 scale = towerHead.localScale;
         scale.x *= -1f;
         towerHead.localScale = scale;
         isMirrored = !isMirrored;
+
+
     }
 }

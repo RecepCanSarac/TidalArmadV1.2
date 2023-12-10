@@ -391,7 +391,7 @@ Transform:
   m_GameObject: {fileID: 2692097663583696691}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: -1, z: 0}
-  m_LocalScale: {x: 2, y: 2, z: 1}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 2692097663397476184}
@@ -415,6 +415,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   bulletSpawnPoint: {fileID: 2692097662929869307}
   bulletText: {fileID: 2692097662726374066}
+  FlameTroper: {fileID: 2692097663397476187}
   tower: {fileID: 11400000, guid: eb28988f688d4774a8e189402c7d06d7, type: 2}
   Name: 
 --- !u!114 &4833875409047895630

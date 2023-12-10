@@ -291,7 +291,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2692097662929869306}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.856, y: 0.398, z: 0}
+  m_LocalPosition: {x: 0.886, y: 0.39, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -343,6 +343,7 @@ GameObject:
   - component: {fileID: 2692097663583696688}
   - component: {fileID: 2692097663583696718}
   - component: {fileID: 2692097663583696689}
+  - component: {fileID: 4088398735192521035}
   m_Layer: 6
   m_Name: BottomBasicTower 00
   m_TagString: Tower
@@ -359,11 +360,12 @@ Transform:
   m_GameObject: {fileID: 2692097663583696691}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: -1, z: 0}
-  m_LocalScale: {x: 2, y: 2, z: 1}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 2692097663397476184}
   - {fileID: 2692097662726374070}
+  - {fileID: 2787497896763350761}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -381,8 +383,29 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   bulletSpawnPoint: {fileID: 2692097662929869307}
   bulletText: {fileID: 2692097662726374066}
+  FlameTroper: {fileID: 2692097663583696691}
   tower: {fileID: 11400000, guid: 60524aa2672fec1479d97395d95f9e0f, type: 2}
+  Name: 
 --- !u!114 &2692097663583696689
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2692097663583696691}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8646c0a53bec77442a07092fa45a18f3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  detectLayer:
+    serializedVersion: 2
+    m_Bits: 128
+  towerHead: {fileID: 2692097662438054864}
+  isActive: 0
+  supportBullet: {fileID: 0}
+  point: {fileID: 0}
+--- !u!114 &4088398735192521035
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -391,13 +414,17 @@ MonoBehaviour:
   m_GameObject: {fileID: 2692097663583696691}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8646c0a53bec77442a07092fa45a18f3, type: 3}
+  m_Script: {fileID: 11500000, guid: 7803ca1b3f3d2854d97faf86f2493fe5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  detectLayer:
+  distance: 7
+  layerMask:
     serializedVersion: 2
     m_Bits: 128
-  towerHead: {fileID: 2692097663397476184}
+  hitPoint: {fileID: 2787497896763350761}
+  supportBullet: {fileID: 0}
+  point: {fileID: 0}
+  towerHead: {fileID: 2692097662438054864}
 --- !u!1 &2692097664086594593
 GameObject:
   m_ObjectHideFlags: 0
@@ -509,3 +536,34 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1.5700717, y: 0.955}
   m_EdgeRadius: 0
+--- !u!1 &8928624694326794749
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2787497896763350761}
+  m_Layer: 0
+  m_Name: HitPoint
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2787497896763350761
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8928624694326794749}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0.912, y: 0.711, z: -0.034006216}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 2692097663583696688}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}

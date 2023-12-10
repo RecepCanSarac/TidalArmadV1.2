@@ -13,6 +13,8 @@ public class TowerObject : MonoBehaviour, IPointerClickHandler
 
     public SOTowerLevel TowerData { get; set; }
 
+    public GameObject FlameTroper;
+
     public SOTowerLevel tower;
     SOBullet bulletData;
     private int bulletIndex;
@@ -37,14 +39,19 @@ public class TowerObject : MonoBehaviour, IPointerClickHandler
     private void Start()
     {
         Ship = GameObject.FindGameObjectWithTag("Ship").transform;
-        if (transform.position.x > Ship.transform.position.x)
+
+        if (FlameTroper != null)
         {
-           transform.localScale = new Vector3(2, 2, 2);
+            if (FlameTroper.transform.position.x > Ship.transform.position.x)
+            {
+                FlameTroper.transform.localScale = new Vector3(1, 1, 1);
+            }
+            else
+            {
+                FlameTroper.transform.localScale = new Vector3(-1, 1, 1);
+            }
         }
-        else
-        {
-           transform.localScale = new Vector3(-2, 2, 2);
-        }
+
     }
     public int GetBulletIndex() => bulletIndex;
     public int GetBulletCount() => bulletCount;
@@ -80,9 +87,9 @@ public class TowerObject : MonoBehaviour, IPointerClickHandler
         bulletCount = count;
         if (bulletText != null)
         {
-            bulletText.text = BuildBulletText();    
+            bulletText.text = BuildBulletText();
         }
-        
+
     }
 
     public void OnChangeTower(SOBullet bullet, int index, int count)
@@ -117,7 +124,7 @@ public class TowerObject : MonoBehaviour, IPointerClickHandler
         {
             bulletText.text = BuildBulletText();
         }
-      
+
         //Add 
     }
 

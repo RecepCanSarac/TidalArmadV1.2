@@ -822,6 +822,17 @@ PrefabInstance:
       propertyPath: orientation
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5337413451386887161, guid: 6dc8f4ee6004b5345a5925b01e34cb27,
+        type: 3}
+      propertyPath: allMapConfigs.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5337413451386887161, guid: 6dc8f4ee6004b5345a5925b01e34cb27,
+        type: 3}
+      propertyPath: allMapConfigs.Array.data[0]
+      value: 
+      objectReference: {fileID: 11400000, guid: 19bf411c79e522b4b8e54f82b0140314,
+        type: 2}
     - target: {fileID: 6173653652465991376, guid: 6dc8f4ee6004b5345a5925b01e34cb27,
         type: 3}
       propertyPath: m_Name
