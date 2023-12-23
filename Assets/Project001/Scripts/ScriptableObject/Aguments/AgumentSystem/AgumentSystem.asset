@@ -15,7 +15,9 @@ MonoBehaviour:
   Aguments:
   - agument: {fileID: 11400000, guid: d675b6026f9a24f41a88d11bfc417e97, type: 2}
     available: 1
-  - agument: {fileID: 11400000, guid: d675b6026f9a24f41a88d11bfc417e97, type: 2}
-    available: 1
   - agument: {fileID: 11400000, guid: 32ec9cfaaa6bbf54aaab5675786e7890, type: 2}
+    available: 1
+  - agument: {fileID: 11400000, guid: 11e2ed85f72439843b0162d85e1452db, type: 2}
+    available: 1
+  - agument: {fileID: 11400000, guid: c07c94161a254aa4dba051b3c0fb4e0f, type: 2}
     available: 1

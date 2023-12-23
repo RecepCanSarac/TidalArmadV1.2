@@ -1,0 +1,43 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8170c6308e3de0348a5c84383d8204ce, type: 3}
+  m_Name: SpeedAttack
+  m_EditorClassIdentifier: 
+  used: 0
+  isActive: 0
+  AgumentTag: SPEED_ATTACK
+  AgumentIndex: 0
+  agumentImage: {fileID: 55637834, guid: 00021b1a200080345ba5d3534d1690fe, type: 3}
+  agumentName: Speed Attack
+  agumentDescreption: Allows towers to attack faster
+  towers:
+  - {fileID: 11400000, guid: 20232826600fcc142a5ac7ac76ae476e, type: 2}
+  - {fileID: 11400000, guid: 7eb77e03a59a4ce4b978ac2a62963eff, type: 2}
+  - {fileID: 11400000, guid: 354b15e26d348fd45b534dc9273b3c94, type: 2}
+  - {fileID: 11400000, guid: b41afb4003b744c4d8a44037f4549696, type: 2}
+  - {fileID: 11400000, guid: 1c81a61ba0a2a0b4989bdb5846d35e40, type: 2}
+  - {fileID: 11400000, guid: 024848f200f05944d8496c26126c4973, type: 2}
+  - {fileID: 11400000, guid: ecc03f557480d7b4da820d21e328725a, type: 2}
+  - {fileID: 11400000, guid: 1520a7cbb10155342bd58331b0ae0f84, type: 2}
+  - {fileID: 11400000, guid: 72c37362b2b0ecb43b6601e781382424, type: 2}
+  - {fileID: 11400000, guid: 60524aa2672fec1479d97395d95f9e0f, type: 2}
+  - {fileID: 11400000, guid: c0295f1737851cf4f828edec6e95720c, type: 2}
+  - {fileID: 11400000, guid: 2c53ad11cc46643468a1ace2744cdc27, type: 2}
+  - {fileID: 11400000, guid: 744bd2391728e4e43993cc18806d1eba, type: 2}
+  - {fileID: 11400000, guid: eb28988f688d4774a8e189402c7d06d7, type: 2}
+  - {fileID: 11400000, guid: 4bdfff9c35a3c10449370c2b5b1e4b52, type: 2}
+  - {fileID: 11400000, guid: 045ebe6b6840586489e69dd1cb51bb93, type: 2}
+  - {fileID: 11400000, guid: 9f3dcd471005e13469540a95299271bd, type: 2}
+  - {fileID: 11400000, guid: fde35448e672f704bb1f766a7dde2331, type: 2}
+  - {fileID: 11400000, guid: 8879b11ccd8d21449859d1fbc15c2bf2, type: 2}
+  - {fileID: 11400000, guid: 1f89834a15b86344db3e02809bfd51bb, type: 2}
+  - {fileID: 11400000, guid: 21ee6a2b01f863140ac06d431a94ba87, type: 2}

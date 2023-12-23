@@ -20,3 +20,4 @@ MonoBehaviour:
   agumentName: Health Boost
   agumentDescreption: Adds 200 more health to the ship's health
   ship: {fileID: 11400000, guid: ef9ed93a51aea75489fbc15af06d8e86, type: 2}
+  health: 250
