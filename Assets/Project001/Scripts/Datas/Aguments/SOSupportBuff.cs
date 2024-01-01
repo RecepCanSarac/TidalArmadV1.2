@@ -11,5 +11,7 @@ public class SOSupportBuff : SOAgument
         {
             supportTowers[i].attackSpeed += (supportTowers[i].attackSpeed * 30 / 100);
         }
+
+        used = true;
     }
 }

@@ -25,3 +25,15 @@ MonoBehaviour:
     available: 1
   - agument: {fileID: 11400000, guid: 182d861ec901a1f45a5d31d028a6300b, type: 2}
     available: 1
+  - agument: {fileID: 11400000, guid: ff37eff34597c3648bb993fc61809e0d, type: 2}
+    available: 1
+  - agument: {fileID: 11400000, guid: 542321c57e4221f4b96bc239e684f5bd, type: 2}
+    available: 1
+  - agument: {fileID: 11400000, guid: fa1f6f0c2b69fe94d92925e9c36c18eb, type: 2}
+    available: 1
+  - agument: {fileID: 11400000, guid: 6d193f92e7f8f0442b8ff3571b323eb0, type: 2}
+    available: 1
+  - agument: {fileID: 11400000, guid: 27f498eb6902b8b498ed61b532fc09ed, type: 2}
+    available: 1
+  - agument: {fileID: 11400000, guid: 47607cdfea10891479d60b716fa31d63, type: 2}
+    available: 1

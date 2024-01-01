@@ -1,0 +1,30 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cefc32d8ca99827458df9a9f6323e9da, type: 3}
+  m_Name: LowHealth
+  m_EditorClassIdentifier: 
+  used: 0
+  isActive: 0
+  AgumentTag: "LOW_HEALTH_H\u0130GHT_SPEED_AND_ATTACK"
+  AgumentIndex: 0
+  agumentImage: {fileID: -103690884, guid: ea7cb14b2bb69ff45a1f926929042274, type: 3}
+  agumentName: Less life, more work
+  agumentDescreption: When your health decreases, your movement speed and damage
+    increase
+  percentage: 50
+  speed: 150
+  damage: 15
+  ship: {fileID: 11400000, guid: ef9ed93a51aea75489fbc15af06d8e86, type: 2}
+  bullet:
+  - {fileID: 11400000, guid: 37d25b7c937adf947a4f48a92a51a3c8, type: 2}
+  - {fileID: 11400000, guid: 6d0f044b3b3f9854ca4cd3963305e4ff, type: 2}
+  - {fileID: 11400000, guid: bb4983d3e400d044ca2a96a11ab051ab, type: 2}

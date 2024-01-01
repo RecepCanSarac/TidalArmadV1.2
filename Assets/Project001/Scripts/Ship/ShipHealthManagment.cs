@@ -6,39 +6,43 @@ public class ShipHealthManagment : MonoBehaviour
 {
     public SOShip ship;
 
+    public float currentHealth;
+    public float currentSpeed;
     private HealthBar healthBar;
 
     private void Start()
     {
-        healthBar = GameObject.FindGameObjectWithTag("HealtBar").GetComponent<HealthBar>();
+        
+        currentHealth = PlayerPrefs.GetFloat(nameof(currentHealth), ship.health);
+        currentSpeed = PlayerPrefs.GetFloat(nameof(currentSpeed), ship.speed);
 
+        healthBar = GameObject.FindGameObjectWithTag("HealtBar").GetComponent<HealthBar>();
         healthBar.SetMaxHealth(ship.health);
+        healthBar.SetHealth(currentHealth); 
     }
+
     private void Update()
     {
-        if (ship.guardianAngel == true && ship.health <= 0)
-        {
-            ///<summary>
-            ///Guardian Angel Animation and reborn
-            /// </summary>
 
-            Debug.Log("Guardian Angel Actived");
+        PlayerPrefs.SetFloat(nameof(currentSpeed), currentSpeed);
+        if (ship.guardianAngel == true && currentHealth <= 0)
+        {
+            // Guardian Angel aktifse ve saðlýk sýfýrsa geri doðma iþlemleri
+            Debug.Log("Guardian Angel Activated");
         }
-        else if (ship.guardianAngel == false && ship.health <= 0)
+        else if (ship.guardianAngel == false && currentHealth <= 0)
         {
-            ///<summary>
-            ///Ship Destroy Animation and Just Ship Destroy
-            /// </summary>
-
+            // Guardian Angel aktif deðilse ve saðlýk sýfýrsa gemi yok olma iþlemleri
             Debug.Log("Ship Destroyed");
         }
     }
 
-
     public void TakeDamage(float damage)
     {
-        ship.health -= damage;
+        currentHealth -= damage;
 
-        healthBar.SetHealth(ship.health);
+        healthBar.SetHealth(currentHealth);
+        PlayerPrefs.SetFloat(nameof(currentHealth), currentHealth);
+        PlayerPrefs.Save();
     }
 }

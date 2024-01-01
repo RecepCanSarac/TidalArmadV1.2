@@ -1,7 +1,6 @@
 using UnityEngine.UI;
 using TMPro;
 using UnityEngine;
-using UnityEngine.SceneManagement;
 
 public class AgumentUI : MonoBehaviour
 {

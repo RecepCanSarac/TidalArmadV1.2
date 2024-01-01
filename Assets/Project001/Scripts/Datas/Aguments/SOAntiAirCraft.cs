@@ -14,6 +14,6 @@ public class SOAntiAirCraft : SOAgument
             bullets[i].bulletSlowEnemy += slow;
             Debug.Log(bullets[i].bulletSlowEnemy);
         }
-       
+       used = true;
     }
 }
