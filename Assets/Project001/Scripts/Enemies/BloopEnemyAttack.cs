@@ -4,6 +4,8 @@ public class BloopEnemyAttack : MonoBehaviour
 {
     private Rigidbody2D rb;
     private BloopEnemyMove bloop;
+
+    public float damage;
     private void Start()
     {
         rb = GetComponent<Rigidbody2D>();
@@ -17,6 +19,9 @@ public class BloopEnemyAttack : MonoBehaviour
     }
     private void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.gameObject.CompareTag("Ship") || other.gameObject.CompareTag("Tower")) Destroy(gameObject);
+        if (other.gameObject.CompareTag("Ship") || other.gameObject.CompareTag("Tower"))
+        {
+            other.gameObject.GetComponent<ShipHealthManagment>().TakeDamage(damage);
+        }
     }
 }

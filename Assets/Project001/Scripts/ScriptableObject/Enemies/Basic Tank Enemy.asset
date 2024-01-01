@@ -13,6 +13,7 @@ MonoBehaviour:
   m_Name: Basic Tank Enemy
   m_EditorClassIdentifier: 
   MapType: 0
+  EnemyType: 0
   health: 300
   speed: 225
   Damage: 10

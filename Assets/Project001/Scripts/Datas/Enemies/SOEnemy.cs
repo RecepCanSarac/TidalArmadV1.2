@@ -11,12 +11,17 @@ public enum MapType
     Boss,
     Mystery
 }
-
+public enum EnemyType
+{
+    NormalEnemy,
+    FlyEnemy
+}
 [CreateAssetMenu(fileName = "Enemy", menuName = "Enemy/Enemy")]
 public class SOEnemy : ScriptableObject
 {
     [Header("EnemyType")]
     public MapType MapType;
+    public EnemyType EnemyType;
     [Header("Attributes")]
     public float health;
     public float speed;

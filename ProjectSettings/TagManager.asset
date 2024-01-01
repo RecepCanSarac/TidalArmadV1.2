@@ -9,15 +9,9 @@ TagManager:
   - Ship
   - UpgradeButton
   - Agument
-  - HealthBust
-  - EnemySlow
-  - +200Gold
-  - ForceUp
-  - LowDamage
-  - MoreGold
-  - RandomEnemyGold
-  - FastAttackSpeed
+  - EnemyBullet
   - RageSkill
+  - HealtBar
   layers:
   - Default
   - TransparentFX

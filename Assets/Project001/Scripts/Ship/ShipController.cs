@@ -1,7 +1,5 @@
-using UnityEditor.SearchService;
 using UnityEngine;
 using UnityEngine.SceneManagement;
-using UnityEngine.SocialPlatforms;
 
 public class ShipController : MonoBehaviour
 {
@@ -12,11 +10,16 @@ public class ShipController : MonoBehaviour
     private Rigidbody2D rb;
     private bool isFacingRight = true;
 
+    private HealthBar healthBar;
+
     private void Start()
     {
         currentSpeed = ship.speed;
         currentHealth = ship.health;
         rb = GetComponent<Rigidbody2D>();
+
+        healthBar = GameObject.FindGameObjectWithTag("HealtBar").GetComponent<HealthBar>();
+        healthBar.SetMaxHealth(currentHealth);
     }
 
     private void Update()
@@ -47,5 +50,4 @@ public class ShipController : MonoBehaviour
             }
         }
     }
-
 }

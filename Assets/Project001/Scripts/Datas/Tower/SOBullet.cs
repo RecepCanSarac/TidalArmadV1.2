@@ -20,6 +20,7 @@ public class SOBullet : ScriptableObject
 
     public float bulletDamage;
     public float bulletSpeed;
+    public float bulletSlowEnemy;
 
     public GameObject bulletPrefab;
 

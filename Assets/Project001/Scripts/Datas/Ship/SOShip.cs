@@ -6,7 +6,7 @@ public class SOShip : ScriptableObject
 {
     public float health;
     public float speed;
-
+    public bool guardianAngel = false;
     public float price;
     public GameObject ShipPrefab;
 }

@@ -9,6 +9,13 @@ public class SharapnelBullet : MonoBehaviour
     public float impactDamage;
 
     public LayerMask mask;
+
+    private BulletObject bullet;
+
+    private void Start()
+    {
+        bullet = GetComponent<BulletObject>();
+    }
     public void Expolosion()
     {
         Collider2D[] hit = Physics2D.OverlapCircleAll(transform.position, radius, mask);
@@ -18,6 +25,7 @@ public class SharapnelBullet : MonoBehaviour
             foreach (Collider2D col in hit)
             {
                 col.GetComponent<EnemyMoveController>().currentHealth -= impactDamage;
+                col.GetComponent<EnemyMoveController>().currentSpeed -= bullet.bullet.bulletSlowEnemy;
             }
         }
     }

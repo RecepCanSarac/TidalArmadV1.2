@@ -46,17 +46,23 @@ public class EnemyMoveController : MonoBehaviour
     {
         rb.velocity = new Vector2(speed * Time.deltaTime, rb.velocity.y);
     }
-
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.TryGetComponent<ShipHealthManagment>(out ShipHealthManagment ship))
+        {
+            ship.TakeDamage(currentDamage);
+        }
+    }
     private void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.gameObject.CompareTag("Ship"))
+        if (other.gameObject.TryGetComponent<ShipHealthManagment>(out ShipHealthManagment ship))
         {
-            currentSpeed = 0;
-            //Atack
+            ship.TakeDamage(currentDamage);
         }
         if (other.gameObject.GetComponent<BulletObject>())
         {
             currentHealth -= other.gameObject.GetComponent<BulletObject>().bullet.bulletDamage;
+            currentSpeed -= other.gameObject.GetComponent<BulletObject>().bullet.bulletSlowEnemy;
         }
         if (other.gameObject.GetComponent<FireBullet>())
         {
