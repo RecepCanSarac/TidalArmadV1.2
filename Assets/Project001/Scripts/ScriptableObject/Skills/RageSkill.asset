@@ -1,0 +1,31 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6c06bd1171f912244bd614f13052ca8f, type: 3}
+  m_Name: RageSkill
+  m_EditorClassIdentifier: 
+  SkillName: Rage Skill
+  coolDownTime: 4
+  SkillSprite: {fileID: 1901432768, guid: b710f1cd0efe2bb42aa21708a5a26a70, type: 3}
+  isActive: 1
+  time: 5
+  bullets:
+  - {fileID: 11400000, guid: 37d25b7c937adf947a4f48a92a51a3c8, type: 2}
+  - {fileID: 11400000, guid: 6d0f044b3b3f9854ca4cd3963305e4ff, type: 2}
+  - {fileID: 11400000, guid: bb4983d3e400d044ca2a96a11ab051ab, type: 2}
+  currentDamage:
+  - 30
+  - 19
+  - 26
+  Damage:
+  - 5
+  - 4
+  - 6

@@ -16,7 +16,7 @@ public class SkillUI : MonoBehaviour
     }
     private void SkillSetup()
     {
-       
+
         for (int j = 0; j < images.Length; j++)
         {
             for (int i = 0; i < skillSystem.SkilList.Count; i++)
@@ -30,10 +30,8 @@ public class SkillUI : MonoBehaviour
                 else
                 {
                     buttons[i].SetActive(false);
-
                 }
             }
-         
         }
     }
 }

@@ -19,7 +19,8 @@ MonoBehaviour:
   bulletPrice: 50
   capacityType: 1
   bulletCapacity: 20
-  bulletDamage: 15
+  bulletDamage: 20
   bulletSpeed: 50
+  bulletSlowEnemy: 0
   bulletPrefab: {fileID: 2440931480022169044, guid: 475967ec615a41743becdfab944814c5,
     type: 3}
