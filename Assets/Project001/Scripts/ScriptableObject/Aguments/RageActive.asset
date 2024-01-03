@@ -1,0 +1,24 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3c3db7cc0ce65524f9eea5864a93bb7a, type: 3}
+  m_Name: RageActive
+  m_EditorClassIdentifier: 
+  used: 0
+  isActive: 0
+  AgumentTag: Rage Skill Active
+  AgumentIndex: 0
+  agumentImage: {fileID: -1711168644, guid: bbb2526ece73a96478b08924af6ab7d5, type: 3}
+  agumentName: Rage Skill Active
+  agumentDescreption: Activates the RAGE ability, which allows cannons to fire more
+    powerfully for a certain period of time.
+  skil: {fileID: 11400000, guid: 865108d718c307c45afd999798d9b3da, type: 2}
+  SkillSystem: {fileID: 11400000, guid: 55bb9bbd35077d745b0acd4fa11b5169, type: 2}
