@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3c3db7cc0ce65524f9eea5864a93bb7a, type: 3}
+  m_Name: Buff
+  m_EditorClassIdentifier: 
+  used: 0
+  isActive: 0
+  AgumentTag: BUFF
+  AgumentIndex: 0
+  agumentImage: {fileID: 21300000, guid: 71cc6a123601cfb4a900b8fbc771374f, type: 3}
+  agumentName: Buff
+  agumentDescreption: The ship's basic stats increase
+  skil: {fileID: 11400000, guid: 112c8dc7f975bfa49b0da3502e93c73b, type: 2}
+  SkillSystem: {fileID: 11400000, guid: 55bb9bbd35077d745b0acd4fa11b5169, type: 2}

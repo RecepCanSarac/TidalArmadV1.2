@@ -14,10 +14,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   SkilList:
   - skil: {fileID: 11400000, guid: 865108d718c307c45afd999798d9b3da, type: 2}
-    isAvailable: 0
+    isAvailable: 1
   - skil: {fileID: 11400000, guid: 81a2feee342f3da4591cf8d6513fcebd, type: 2}
-    isAvailable: 0
-  - skil: {fileID: 11400000, guid: e1023872373084645ab7a342b76810c8, type: 2}
     isAvailable: 1
   - skil: {fileID: 11400000, guid: ba415a1fe3ae86849bed8b30702bcfba, type: 2}
+    isAvailable: 1
+  - skil: {fileID: 11400000, guid: e1023872373084645ab7a342b76810c8, type: 2}
+    isAvailable: 1
+  - skil: {fileID: 11400000, guid: 112c8dc7f975bfa49b0da3502e93c73b, type: 2}
     isAvailable: 1
