@@ -17,6 +17,6 @@ MonoBehaviour:
   workingTime: 3
   work: 1
   SkillSprite: {fileID: -1864194730, guid: 9d7845025bd72314280bf9692beea585, type: 3}
-  isActive: 0
+  isActive: 1
   percentage: 20
   speed: 15000
