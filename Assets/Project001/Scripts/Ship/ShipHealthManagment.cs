@@ -10,6 +10,7 @@ public class ShipHealthManagment : MonoBehaviour
     public float currentSpeed;
     private HealthBar healthBar;
 
+    public  bool immortality;
     private void Start()
     {
         
@@ -40,8 +41,11 @@ public class ShipHealthManagment : MonoBehaviour
 
     public void TakeDamage(float damage)
     {
-        currentHealth -= damage;
-
+        if (immortality == false)
+        {
+            currentHealth -= damage;
+        }
+        
         healthBar.SetHealth(currentHealth);
         PlayerPrefs.SetFloat(nameof(currentHealth), currentHealth);
         PlayerPrefs.Save();
