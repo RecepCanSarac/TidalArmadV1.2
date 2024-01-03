@@ -16,4 +16,4 @@ MonoBehaviour:
   - skil: {fileID: 11400000, guid: 865108d718c307c45afd999798d9b3da, type: 2}
     isAvailable: 0
   - skil: {fileID: 11400000, guid: 81a2feee342f3da4591cf8d6513fcebd, type: 2}
-    isAvailable: 0
+    isAvailable: 1
