@@ -13,9 +13,10 @@ MonoBehaviour:
   m_Name: Basic Enemy
   m_EditorClassIdentifier: 
   MapType: 0
+  EnemyType: 0
   health: 150
   speed: 275
-  Damage: 10
+  Damage: 25
   Gold: 15
   AttackRange: 0
   AttackSpeed: 0

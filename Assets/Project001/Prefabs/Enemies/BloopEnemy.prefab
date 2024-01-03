@@ -47,7 +47,7 @@ GameObject:
   - component: {fileID: 2084278742844709307}
   m_Layer: 7
   m_Name: BloopEnemy
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -252,6 +252,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 80023852b633aea4b995b4bef7eedb7f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  damage: 0
 --- !u!114 &2084278742844709307
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -267,5 +268,7 @@ MonoBehaviour:
   amplitude: 1.5
   frequency: 3
   xMove: 0.0007
+  currentXMove: 0
+  currnetFrequency: 0
   hitPoint: {fileID: 2084278742022827453}
   bloopEnemy: {fileID: 11400000, guid: 082c4b73f4c8fb147aa74645ee7a521a, type: 2}

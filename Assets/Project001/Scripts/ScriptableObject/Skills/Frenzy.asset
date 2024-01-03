@@ -9,21 +9,21 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6c06bd1171f912244bd614f13052ca8f, type: 3}
-  m_Name: RageSkill
+  m_Script: {fileID: 11500000, guid: a37067c77b1b0ff41b143240b5fe234f, type: 3}
+  m_Name: Frenzy
   m_EditorClassIdentifier: 
-  SkillName: Rage Skill
+  SkillName: Frenzy
   coolDownTime: 5
-  workingTime: 4
-  work: 1
-  SkillSprite: {fileID: 1901432768, guid: b710f1cd0efe2bb42aa21708a5a26a70, type: 3}
+  workingTime: 3
+  work: 0
+  SkillSprite: {fileID: 21300000, guid: a88a7563a359bf040bf8b38cf3c91411, type: 3}
   isActive: 1
-  time: 5
   bullets:
   - {fileID: 11400000, guid: 37d25b7c937adf947a4f48a92a51a3c8, type: 2}
   - {fileID: 11400000, guid: 6d0f044b3b3f9854ca4cd3963305e4ff, type: 2}
   - {fileID: 11400000, guid: bb4983d3e400d044ca2a96a11ab051ab, type: 2}
-  Damage:
-  - 5
+  bulletsDamage:
+  - 12
+  - 23
   - 4
-  - 6
+  EnemyDamage: 15

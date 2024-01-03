@@ -12,6 +12,7 @@ TagManager:
   - EnemyBullet
   - RageSkill
   - HealtBar
+  - Enemy
   layers:
   - Default
   - TransparentFX
