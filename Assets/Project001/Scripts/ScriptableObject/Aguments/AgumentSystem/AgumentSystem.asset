@@ -39,3 +39,5 @@ MonoBehaviour:
     available: 1
   - agument: {fileID: 11400000, guid: f1efe87df5725e14bb2971f8c703dd4e, type: 2}
     available: 1
+  - agument: {fileID: 11400000, guid: 73230962888b362499e964706219f4d8, type: 2}
+    available: 1

@@ -35,6 +35,7 @@ public class ShipHealthManagment : MonoBehaviour
             // Guardian Angel aktif deðilse ve saðlýk sýfýrsa gemi yok olma iþlemleri
             Debug.Log("Ship Destroyed");
         }
+        healthBar.SetHealth(currentHealth);
     }
 
     public void TakeDamage(float damage)
