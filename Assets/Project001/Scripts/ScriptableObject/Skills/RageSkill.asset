@@ -13,9 +13,11 @@ MonoBehaviour:
   m_Name: RageSkill
   m_EditorClassIdentifier: 
   SkillName: Rage Skill
-  coolDownTime: 4
+  coolDownTime: 5
+  workingTime: 4
+  work: 1
   SkillSprite: {fileID: 1901432768, guid: b710f1cd0efe2bb42aa21708a5a26a70, type: 3}
-  isActive: 1
+  isActive: 0
   time: 5
   bullets:
   - {fileID: 11400000, guid: 37d25b7c937adf947a4f48a92a51a3c8, type: 2}

@@ -35,7 +35,7 @@ public class SkillManagment : MonoBehaviour
 
     void PressButton(int buttonIndex)
     {
-        if ((buttonIndex >= 0 && buttonIndex < buttons.Count) && skillSystem.SkilList[buttonIndex - 1].isAvailable == true)
+        if ((buttonIndex >= 0 && buttonIndex < buttons.Count) && skillSystem.SkilList[buttonIndex - 1].isAvailable == true && skils[buttonIndex - 1].work == true)
         {
             StartCoroutine(Timer(buttonIndex));
             Debug.Log(buttonIndex);
@@ -47,10 +47,17 @@ public class SkillManagment : MonoBehaviour
         skils[buttonIndex - 1].isActive = false;
         skillSystem.SkilList[buttonIndex - 1].isAvailable = false;
         Debug.Log(skils[buttonIndex - 1].isActive);
-        yield return new WaitForSeconds(skils[buttonIndex - 1].coolDownTime);
+        yield return new WaitForSeconds(skils[buttonIndex - 1].workingTime);
         skils[buttonIndex - 1].Skill();
         skils[buttonIndex - 1].isActive = true;
         skillSystem.SkilList[buttonIndex - 1].isAvailable = true;
+        skils[buttonIndex - 1].work = false; 
         Debug.Log(skils[buttonIndex - 1].isActive);
+
+        yield return new WaitForSeconds(skils[buttonIndex - 1].coolDownTime);
+
+        skils[buttonIndex - 1].work = true;
     }
+
+   
 }
