@@ -15,7 +15,7 @@ MonoBehaviour:
   SkillName: Frenzy
   coolDownTime: 5
   workingTime: 3
-  work: 0
+  work: 1
   SkillSprite: {fileID: 21300000, guid: a88a7563a359bf040bf8b38cf3c91411, type: 3}
   isActive: 1
   bullets:
@@ -26,4 +26,4 @@ MonoBehaviour:
   - 12
   - 23
   - 4
-  EnemyDamage: 15
+  enemyDamage: 0

@@ -1,72 +1,72 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+
 [CreateAssetMenu(fileName = "Frenzy", menuName = "Skills/Frenzy")]
 public class SOFrenzy : SOSkill
 {
     private GameObject ship;
-
-
-    private List<EnemyMoveController> enemyMoveController = new List<EnemyMoveController>();
+    private List<EnemyMoveController> enemyMoveControllers = new List<EnemyMoveController>();
 
     public SOBullet[] bullets;
-
     public float[] bulletsDamage;
 
+    public float enemyDamage;
 
-    public float EnemyDamage;
     public override void Skill()
     {
-        if (isActive == true)
+        ship = GameObject.FindGameObjectWithTag("Ship");
+
+        if (isActive)
         {
-            ship = GameObject.FindGameObjectWithTag("Ship");
-
-            ship.GetComponent<ShipController>().currentSpeed -= ship.GetComponent<ShipController>().currentSpeed;
-            GameObject[] enemies = GameObject.FindGameObjectsWithTag("Enemy");
-
-            foreach (GameObject enemyObject in enemies)
-            {
-                EnemyMoveController enemyMoveControllerComponent = enemyObject.GetComponent<EnemyMoveController>();
-
-                if (enemyMoveControllerComponent != null)
-                {
-                    enemyMoveController.Add(enemyMoveControllerComponent);
-
-                }
-            }
-            for (int i = 0; i < enemyMoveController.Count; i++)
-            {
-                enemyMoveController[i].enemy.Damage -= EnemyDamage;
-            }
-
-            for(int i = 0;i < bullets.Length; i++)
-            {
-                bullets[i].bulletDamage -= bulletsDamage[i];
-            }
+            ApplyFrenzyEffects();
         }
         else
         {
-            ship = GameObject.FindGameObjectWithTag("Ship");
-            ship.GetComponent<ShipController>().currentSpeed += ship.GetComponent<ShipController>().ship.speed;
-            GameObject[] enemies = GameObject.FindGameObjectsWithTag("Enemy");
+            RemoveFrenzyEffects();
+        }
+    }
 
-            foreach (GameObject enemyObject in enemies)
+    private void ApplyFrenzyEffects()
+    {
+        ship.GetComponent<ShipController>().currentSpeed = 0f;
+
+        GameObject[] enemies = GameObject.FindGameObjectsWithTag("Enemy");
+        foreach (GameObject enemyObject in enemies)
+        {
+            EnemyMoveController enemyMoveControllerComponent = enemyObject.GetComponent<EnemyMoveController>();
+            if (enemyMoveControllerComponent != null && !enemyMoveControllers.Contains(enemyMoveControllerComponent))
             {
-                EnemyMoveController enemyMoveControllerComponent = enemyObject.GetComponent<EnemyMoveController>();
-
-                if (enemyMoveControllerComponent != null)
+                enemyMoveControllers.Add(enemyMoveControllerComponent);
+                if (enemyMoveControllerComponent.enemy != null)
                 {
-                    enemyMoveController.Remove(enemyMoveControllerComponent);
+                    enemyMoveControllerComponent.enemy.Damage -= enemyDamage;
                 }
             }
-            for (int i = 0; i < enemyMoveController.Count; i++)
+        }
+
+        for (int i = 0; i < bullets.Length; i++)
+        {
+            bullets[i].bulletDamage -= bulletsDamage[i];
+        }
+    }
+
+    private void RemoveFrenzyEffects()
+    {
+        ship.GetComponent<ShipController>().currentSpeed = ship.GetComponent<ShipController>().ship.speed;
+
+        foreach (EnemyMoveController enemyMoveControllerComponent in enemyMoveControllers)
+        {
+            if (enemyMoveControllerComponent.enemy != null)
             {
-                enemyMoveController[i].enemy.Damage += EnemyDamage;
+                enemyMoveControllerComponent.enemy.Damage += enemyDamage;
             }
-            for (int i = 0; i < bullets.Length; i++)
-            {
-                bullets[i].bulletDamage += bulletsDamage[i];
-            }
+        }
+        enemyMoveControllers.Clear();
+
+        for (int i = 0; i < bullets.Length; i++)
+        {
+            bullets[i].bulletDamage += bulletsDamage[i];
         }
     }
 }

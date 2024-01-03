@@ -16,7 +16,7 @@ MonoBehaviour:
   EnemyType: 0
   health: 300
   speed: 225
-  Damage: 10
+  Damage: 20
   Gold: 20
   AttackRange: 0
   AttackSpeed: 0

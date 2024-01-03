@@ -15,7 +15,7 @@ MonoBehaviour:
   SkillName: Immortality
   coolDownTime: 5
   workingTime: 3
-  work: 1
+  work: 0
   SkillSprite: {fileID: 21300000, guid: 71cc6a123601cfb4a900b8fbc771374f, type: 3}
   isActive: 1
   ship: {fileID: 0}
