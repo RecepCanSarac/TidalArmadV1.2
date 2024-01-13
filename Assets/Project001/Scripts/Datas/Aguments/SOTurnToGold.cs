@@ -8,7 +8,7 @@ public class SOTurnToGold : SOAgument
     private GameObject obj;
     public override void AugmenFunc()
     {
-        obj = GameObject.FindGameObjectWithTag("TurnGold");
-        obj.SetActive(true);
+        //obj = GameObject.FindGameObjectWithTag("TurnGold");
+        //obj.SetActive(true);
     }
 }

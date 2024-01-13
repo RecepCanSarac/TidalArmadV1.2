@@ -18,4 +18,5 @@ MonoBehaviour:
   work: 1
   SkillSprite: {fileID: 21300000, guid: 61cdc6e241b3a6e41921254d097c77b7, type: 3}
   isActive: 1
-  Force: 250
+  enemySpeed: 250
+  distanceToKeep: 5
