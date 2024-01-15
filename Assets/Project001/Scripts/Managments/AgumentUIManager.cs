@@ -13,19 +13,13 @@ public class AgumentUIManager : MonoBehaviour
 
     public float recommendedPrice;
 
+
     private void Start()
     {
         SetRandomAgument();
-        recommendedPrice = PlayerPrefs.GetFloat("recommendedPrice", 500000);
+        recommendedPrice = PlayerPrefs.GetFloat("recommendedPrice", recommendedPrice);
     }
 
-    private void Update()
-    {
-        if (Input.GetKeyDown(KeyCode.Q))
-        {
-            Tenure();
-        }
-    }
 
     public void SetRandomAgument()
     {
@@ -58,7 +52,7 @@ public class AgumentUIManager : MonoBehaviour
         }
     }
 
-    private void Tenure()
+    public void Tenure()
     {
         if (EconomyManager.instance.Gold >= recommendedPrice)
         {
