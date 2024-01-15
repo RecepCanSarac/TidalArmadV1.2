@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -13,6 +14,7 @@ public class AgumentUIManager : MonoBehaviour
 
     public float recommendedPrice;
 
+    public TextMeshProUGUI textMeshProUGUI;
 
     private void Start()
     {
@@ -51,14 +53,13 @@ public class AgumentUIManager : MonoBehaviour
             availableIndices.Remove(randomIndex);
         }
     }
-
     public void Tenure()
     {
         if (EconomyManager.instance.Gold >= recommendedPrice)
         {
             EconomyManager.instance.DecreaseGold(recommendedPrice);
             recommendedPrice += recommendedPrice;
-
+            textMeshProUGUI.text = "Need your " + recommendedPrice; 
             PlayerPrefs.SetFloat("recommendedPrice", recommendedPrice);
 
             SetRandomAgument();
@@ -67,16 +68,6 @@ public class AgumentUIManager : MonoBehaviour
                 closeImage[i].gameObject.SetActive(false);
                 panel[i].GetComponent<Button>().interactable = true;
             }
-
-        }
-        else
-        {
-            for (int i = 0; i < closeImage.Length; i++)
-            {
-                closeImage[i].gameObject.SetActive(true);
-                panel[i].GetComponent<Button>().interactable = false;
-            }
         }
     }
-
 }

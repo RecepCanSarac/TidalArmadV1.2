@@ -25,6 +25,16 @@ public class AgumentUI : MonoBehaviour
         if (agument is not null)
         {
             agument.AugmenFunc();
+
+            for (int i = 0; i < agumentUIManager.AgumentSystem.Aguments.Count; i++)
+            {
+                if (agumentUIManager.AgumentSystem.Aguments[i].agument.agumentName == agument.agumentName)
+                {
+                    agumentUIManager.AgumentSystem.Aguments[i].available = false;
+                }
+            }
+
+
             for (int i = 0; i < agumentUIManager.closeImage.Length; i++)
             {
                 agumentUIManager.closeImage[i].gameObject.SetActive(true);

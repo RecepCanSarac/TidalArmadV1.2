@@ -27,4 +27,10 @@ public class LevelPassManagment : MonoBehaviour
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
         }
     }
+
+
+    public void mapGanerator()
+    {
+        SceneManager.LoadScene("MapGenerator");
+    }
 }

@@ -1914,6 +1914,7 @@ MonoBehaviour:
   - {fileID: 1700951121}
   - {fileID: 540339912}
   recommendedPrice: 150
+  textMeshProUGUI: {fileID: 162940968}
 --- !u!4 &333695323
 Transform:
   m_ObjectHideFlags: 0
