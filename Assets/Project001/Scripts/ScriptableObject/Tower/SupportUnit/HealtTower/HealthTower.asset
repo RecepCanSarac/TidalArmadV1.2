@@ -16,6 +16,7 @@ MonoBehaviour:
   towerName: support
   towerDescription: "S\xFCrekli can yeniler"
   buildPrice: 40
+  type: 1
   upgradeList:
   - {fileID: 11400000, guid: eb468430083dc94419683b741738c259, type: 2}
   - {fileID: 11400000, guid: bcd2a5034c0fab74ebb1171450ef23ad, type: 2}

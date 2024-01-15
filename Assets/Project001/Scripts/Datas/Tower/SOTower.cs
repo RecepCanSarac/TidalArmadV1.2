@@ -11,6 +11,7 @@ public class SOTower : ScriptableObject
     public string towerDescription;
 
     public float buildPrice;
+    public TowerType type;
 
     public List<SOTowerLevel> upgradeList = new List<SOTowerLevel>();
 
@@ -43,4 +44,9 @@ public class SOTower : ScriptableObject
         EconomyManager.instance.DecreaseGold(upgradeList[index].upgradePrice);
     }
     #endregion
+}
+public enum TowerType
+{
+    CanBuyBUllet,
+    CantBuyBullet
 }

@@ -16,6 +16,7 @@ MonoBehaviour:
   towerName: support
   towerDescription: "Gemiye h\u0131z verir"
   buildPrice: 90
+  type: 1
   upgradeList:
   - {fileID: 11400000, guid: a31ed7cb092c8f34ba77b0aa73c7f804, type: 2}
   - {fileID: 11400000, guid: f1debd0de7aaee14a94a7ba019469a67, type: 2}

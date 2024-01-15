@@ -16,6 +16,7 @@ MonoBehaviour:
   towerName: support
   towerDescription: 
   buildPrice: 150
+  type: 1
   upgradeList:
   - {fileID: 11400000, guid: 8879b11ccd8d21449859d1fbc15c2bf2, type: 2}
   - {fileID: 11400000, guid: 1f89834a15b86344db3e02809bfd51bb, type: 2}

@@ -16,6 +16,7 @@ MonoBehaviour:
   towerName: Barrel Shooter
   towerDescription: 
   buildPrice: 150
+  type: 1
   upgradeList:
   - {fileID: 11400000, guid: 20232826600fcc142a5ac7ac76ae476e, type: 2}
   - {fileID: 11400000, guid: 7eb77e03a59a4ce4b978ac2a62963eff, type: 2}

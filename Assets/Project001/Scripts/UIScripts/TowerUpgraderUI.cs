@@ -43,7 +43,7 @@ public class TowerUpgraderUI : MonoBehaviour
             foreach (var slot in currentSlot.buildableTowerList)
             {
                 Show();
-                if (slot.towerName != "support")
+                if (slot.type == TowerType.CanBuyBUllet)
                 {
                     bulletUpgradePanelButton.interactable = true;
                     bulletUpgradePanelObje.SetActive(true);

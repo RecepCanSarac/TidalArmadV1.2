@@ -16,6 +16,7 @@ MonoBehaviour:
   towerName: support
   towerDescription: Zamanla Yakar
   buildPrice: 150
+  type: 1
   upgradeList:
   - {fileID: 11400000, guid: 744bd2391728e4e43993cc18806d1eba, type: 2}
   - {fileID: 11400000, guid: eb28988f688d4774a8e189402c7d06d7, type: 2}
