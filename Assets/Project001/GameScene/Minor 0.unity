@@ -3398,7 +3398,7 @@ MonoBehaviour:
         enemieNumber: 2
         spawnTimer: 1
       WaveTimer: 0
-  panel: {fileID: 0}
+  panel: {fileID: 642813212}
 --- !u!1 &1993767672
 GameObject:
   m_ObjectHideFlags: 0
