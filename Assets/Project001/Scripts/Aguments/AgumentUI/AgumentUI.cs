@@ -1,6 +1,7 @@
 using UnityEngine.UI;
 using TMPro;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class AgumentUI : MonoBehaviour
 {
@@ -24,6 +25,20 @@ public class AgumentUI : MonoBehaviour
         if (agument is not null)
         {
             agument.AugmenFunc();
+            for (int i = 0; i < agumentUIManager.closeImage.Length; i++)
+            {
+                agumentUIManager.closeImage[i].gameObject.SetActive(true);
+                agumentUIManager.panel[i].GetComponent<Button>().interactable = false;
+            }
+            if (!SceneManager.GetActiveScene().name.Equals("StoreScene"))
+            {
+                SceneManager.LoadScene("MapGenerator");
+                for (int i = 0; i < agumentUIManager.closeImage.Length; i++)
+                {
+                    agumentUIManager.closeImage[i].gameObject.SetActive(false);
+                    agumentUIManager.panel[i].GetComponent<Button>().interactable = true;
+                }
+            }
         }
     }
 }

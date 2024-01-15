@@ -8,16 +8,22 @@ public class AgumentUIManager : MonoBehaviour
     public AgumentUI[] agumentUI;
     public GameObject[] panel;
 
+
+    public Image[] closeImage;
+
+    public float recommendedPrice;
+
     private void Start()
     {
         SetRandomAgument();
+        recommendedPrice = PlayerPrefs.GetFloat("recommendedPrice", 500000);
     }
 
     private void Update()
     {
         if (Input.GetKeyDown(KeyCode.Q))
         {
-            SetRandomAgument();
+            Tenure();
         }
     }
 
@@ -51,4 +57,32 @@ public class AgumentUIManager : MonoBehaviour
             availableIndices.Remove(randomIndex);
         }
     }
+
+    private void Tenure()
+    {
+        if (EconomyManager.instance.Gold >= recommendedPrice)
+        {
+            EconomyManager.instance.DecreaseGold(recommendedPrice);
+            recommendedPrice += recommendedPrice;
+
+            PlayerPrefs.SetFloat("recommendedPrice", recommendedPrice);
+
+            SetRandomAgument();
+            for (int i = 0;i < closeImage.Length; i++)
+            {
+                closeImage[i].gameObject.SetActive(false);
+                panel[i].GetComponent<Button>().interactable = true;
+            }
+
+        }
+        else
+        {
+            for (int i = 0; i < closeImage.Length; i++)
+            {
+                closeImage[i].gameObject.SetActive(true);
+                panel[i].GetComponent<Button>().interactable = false;
+            }
+        }
+    }
+
 }
