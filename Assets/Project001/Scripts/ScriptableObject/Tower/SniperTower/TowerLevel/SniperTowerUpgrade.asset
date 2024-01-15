@@ -15,6 +15,7 @@ MonoBehaviour:
   towerIcon: {fileID: -1511520319, guid: f29d4e305cf124d4dab113bae9a79014, type: 3}
   upgradePrice: 275
   detectRange: 7
-  attackSpeed: 1
+  attackSpeed: 0.65
+  damage: 0
   towerPrefab: {fileID: 2692097663583696691, guid: 956f8604d1f48dd46a9ff93eb1ea60d8,
     type: 3}
