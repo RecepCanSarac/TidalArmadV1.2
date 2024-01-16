@@ -12,6 +12,9 @@ public class ShipController : MonoBehaviour
 
     private HealthBar healthBar;
 
+
+    public float minX = -5f;
+    public float maxX = 5f;
     private void Start()
     {
         currentSpeed = ship.speed;
@@ -26,9 +29,11 @@ public class ShipController : MonoBehaviour
     {
         if (SceneManager.GetActiveScene().buildIndex != 3)
         {
+           
             float hareketInput = Input.GetAxis("Horizontal"); 
             rb.velocity = new Vector2(hareketInput * currentSpeed * Time.deltaTime, 0f);
-
+            float x = Mathf.Clamp(transform.position.x, minX, maxX);
+            transform.position = new Vector3(x, transform.position.y, transform.position.z);
             if (!Mathf.Approximately(hareketInput, 0f))
             {
                 Quaternion hedefRotasyon = Quaternion.Euler(0f, hareketInput < 0 ? 180f : 0f, 0f);

@@ -28,9 +28,9 @@ public class LevelPassManagment : MonoBehaviour
         }
     }
 
-
     public void mapGanerator()
     {
         SceneManager.LoadScene("MapGenerator");
+        ShipSpawnerManagment.instance.isSpawn = false;
     }
 }

@@ -110,6 +110,8 @@ MonoBehaviour:
   upgradeble: {fileID: 11400000, guid: c6522dc5dee0b084892769df137a4d80, type: 2}
   currentSpeed: 0
   currentHealth: 0
+  minX: -20
+  maxX: 20
 --- !u!50 &5061727543145870860
 Rigidbody2D:
   serializedVersion: 4
@@ -531,6 +533,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ship: {fileID: 11400000, guid: eda199ab9ec7d184fbb4cf61a98ec870, type: 2}
+  currentHealth: 0
+  currentSpeed: 0
+  immortality: 0
 --- !u!1001 &100383696735735617
 PrefabInstance:
   m_ObjectHideFlags: 0

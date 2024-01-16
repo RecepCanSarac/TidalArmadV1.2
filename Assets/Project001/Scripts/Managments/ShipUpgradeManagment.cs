@@ -44,7 +44,7 @@ public class ShipUpgradeManagment : MonoBehaviour
             GameObject ship = GameObject.FindGameObjectWithTag("Ship");
             Destroy(ship);
 
-            Instantiate(shipSpawn.SpawnPrefab.GetComponent<ShipController>().upgradeble.shipUpgrade[indexNum].ShipPrefab, new Vector2(0, 0), Quaternion.identity);
+            Instantiate(shipSpawn.SpawnPrefab.GetComponent<ShipController>().upgradeble.shipUpgrade[indexNum].ShipPrefab, new Vector2(0, -10), Quaternion.identity);
             shipSpawn.SpawnPrefab = shipSpawn.SpawnPrefab.GetComponent<ShipController>().upgradeble.shipUpgrade[indexNum].ShipPrefab;
             SaveLoadTower.instance.Load();
             EconomyManager.instance.DecreaseGold(shipSpawn.SpawnPrefab.GetComponent<ShipController>().upgradeble.shipUpgrade[indexNum].price);

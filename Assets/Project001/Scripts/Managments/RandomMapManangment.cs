@@ -37,21 +37,28 @@ public class RandomMapManangment : MonoBehaviour
         {
             case NodeType.MinorEnemy:
                 int randomMinor = Random.Range(0, normalLevel.levelNumber.Length);
+                ShipSpawnerManagment.instance.isSpawn = false; 
                 SceneManager.LoadScene("Minor " + 0);
                 break;
             case NodeType.EliteEnemy:
                 int randomElit = Random.Range(0, elitLevel.levelNumber.Length);
+                ShipSpawnerManagment.instance.isSpawn = false;
                 SceneManager.LoadScene("Elit " + randomElit);
                 break;
             case NodeType.Boss:
                 int randomBoss = Random.Range(0, bossLevel.levelNumber.Length);
+                ShipSpawnerManagment.instance.isSpawn = false;
                 SceneManager.LoadScene("Boss " + randomBoss);
                 break;
             case NodeType.Store:
                 SceneManager.LoadScene("StoreScene");
+
+                ShipSpawnerManagment.instance.isSpawn = false;
                 break;
             case NodeType.Treasure:
                 SceneManager.LoadScene("AgumentScene");
+
+                ShipSpawnerManagment.instance.isSpawn = false;
                 break;
         }
     }

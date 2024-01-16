@@ -18,6 +18,7 @@ public class ShipSpawnerManagment : MonoBehaviour
         }
     }
     #endregion
+
     public SOShipSpawn shipSpawn;
     public bool isSpawn;
 
@@ -31,11 +32,6 @@ public class ShipSpawnerManagment : MonoBehaviour
         {
             Instantiate(shipSpawn.SpawnPrefab, shipSpawn.spawnPos, Quaternion.identity);
             isSpawn = true;
-        }
-        if (Input.GetKeyDown(KeyCode.P))
-        {
-            SceneManager.LoadScene("Game01");
-            isSpawn = false;
         }
     }
 }
