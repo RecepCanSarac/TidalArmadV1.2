@@ -34,17 +34,18 @@ public class EnemyMoveController : MonoBehaviour
 
         if (transform.position.x < target.position.x)
         {
-            EnemyMove(currentSpeed);
+            EnemyMove(currentSpeed , true);
         }
         else if (transform.position.x > target.position.x)
         {
-            EnemyMove(-currentSpeed);
+            EnemyMove(-currentSpeed , false);
         }
     }
 
-    private void EnemyMove(float speed)
+    private void EnemyMove(float speed , bool flip)
     {
         rb.velocity = new Vector2(speed * Time.deltaTime, rb.velocity.y);
+        this.gameObject.GetComponent<SpriteRenderer>().flipX = flip;
     }
     private void OnCollisionEnter2D(Collision2D collision)
     {

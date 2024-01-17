@@ -35,21 +35,21 @@ MonoBehaviour:
       distanceFromPreviousLayer:
         min: 0
         max: 0
-      nodesApartDistance: 2
+      nodesApartDistance: 3
       randomizePosition: 1
       randomizeNodes: 0
     - nodeType: 4
       distanceFromPreviousLayer:
         min: 2
         max: 3
-      nodesApartDistance: 2
+      nodesApartDistance: 0
       randomizePosition: 1
       randomizeNodes: 0
     - nodeType: 0
       distanceFromPreviousLayer:
         min: 2
         max: 3
-      nodesApartDistance: 2
+      nodesApartDistance: 0
       randomizePosition: 1
       randomizeNodes: 0
     - nodeType: 3

@@ -9,7 +9,7 @@ public class CameraScripts : MonoBehaviour
 
     public float speed;
 
-    public int offsetY;
+    public float offsetY;
    
     private void Update()
     {
